@@ -16,7 +16,7 @@ import {
   HomeText,
   HomeContentP,
 } from "../HomeComponent/HomeStyle";
-import { Video } from "./Profilecss";
+import image1  from "../../Images/profback.jpg";
 import { animateScroll as scroll } from "react-scroll";
 import { Button } from "@material-ui/core";
 import AOS from "aos";
@@ -77,10 +77,10 @@ const Profile = () => {
 
   return (
     <>
-      <HomeContainer id="profile">
+      <HomeContainer id="profile" style={{backgroundImage:`url(${image1}) `,backgroundSize:' 100% 100%',width:'100vw',backgroundRepeat:'no-repeat'}}>
       
         <HomeBg>
-          <Video autoPlay loop muted src={video} type="video/mp4" />
+         
         </HomeBg>
         <HomeContent>
         <GoogleLogin
@@ -100,7 +100,7 @@ const Profile = () => {
           <HomeP
             
           >
-            Welcome to my web-development portfolio.
+            Welcome to your profile page.
           </HomeP>
         </HomeContent>
       </HomeContainer>
