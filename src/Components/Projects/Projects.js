@@ -21,7 +21,7 @@ import { ProjHome } from "./Projele";
 function Projects() {
     AOS.init();
   return (
-      <div   style={{
+      <div  id="projects" style={{
        backgroundImage:`url(${background})`,backgroundSize:' 100% 100%',width:'100vw',height:'auto',backgroundRepeat:'no-repeat'
       }}>
     <ProjHome className='project'

@@ -15,11 +15,11 @@ import {
   BurgerMenu,
   Mobilebtn,
 } from "./navbarelements";
-import './navbar.css'
+import "./navbar.css";
 import { GoogleLogout } from "react-google-login";
 import Signup from "../../LoginSignup/Signup";
 import GoogleLogin from "react-google-login";
-import { Link,  useHistory} from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import React, { useState, useEffect, useContext, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -52,6 +52,7 @@ import { SiMinutemailer } from "react-icons/si";
 import { FaTimes } from "react-icons/fa";
 import Login from "../../LoginSignup/Login";
 import Singin from "../../LoginSignup/Login";
+import { LinkSharp } from "@mui/icons-material";
 const Navigbar = ({ login }) => {
   const [navbar, setNavbar] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -124,34 +125,30 @@ const Navigbar = ({ login }) => {
   const history = useHistory();
 
   const logout = (response) => {
-    console.log(response)
+    console.log(response);
     history.push("/");
     window.location.reload();
-    
   };
 
   const [name, setName] = React.useState("");
   const responseGoogle = (response) => {
-    
     console.log(response);
     console.log(response.profileObj);
     setName(response.profileObj.name);
     history.push("/");
-    
-    
   };
   function refreshPage() {
     window.location.reload();
   }
   return (
     <div style={{ zIndex: "" }}>
-       <GoogleLogin
-                      clientId="829794049909-usu1p5b3qcvaplttm46h52b2bq9pm16f.apps.googleusercontent.com"
-                      onSuccess={responseGoogle}
-                      onFailure={responseGoogle}
-                      cookiePolicy={"single_host_origin"}
-                      isSignedIn={true}
-                    />
+      <GoogleLogin
+        clientId="829794049909-usu1p5b3qcvaplttm46h52b2bq9pm16f.apps.googleusercontent.com"
+        onSuccess={responseGoogle}
+        onFailure={responseGoogle}
+        cookiePolicy={"single_host_origin"}
+        isSignedIn={true}
+      />
       <Navbar
         style={{
           transition: "1s ease",
@@ -172,26 +169,34 @@ const Navigbar = ({ login }) => {
             <NavItem>
               <NavLink to="/">
                 {" "}
-                
-                  <GiHouse style={{ color: "white" }} />
-                  
-                    {" "}
-                   {name ?  <Link  style={{color:'white',textDecoration:'none'}} to='/'>Home</Link>:<Links  style={{color:'white',textDecoration:'none'}} to='/'>Home</Links>  } 
-        
-                
+                <GiHouse style={{ color: "white" }} />{" "}
+                {name ? (
+                  <Link
+                    style={{ color: "gray", textDecoration: "none" }}
+                    to="/"
+                  >
+                    Home
+                  </Link>
+                ) : (
+                  <Links
+                    style={{ color: "gray", textDecoration: "none" }}
+                    to="/"
+                  >
+                    Home
+                  </Links>
+                )}
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink onClick={showContactModal} isContactOpen={isContactOpen}>
                 {" "}
                 <MdEmail style={{ color: "white" }} />{" "}
-                <a
-                  style={{ textDecoration: "none", color: "gray" }}
-                  target="_blank"
+                <Links 
+                  style={{ color: "gray", textDecoration: "none" }}
+                  to="projects"
                 >
-                  {" "}
-                  Contact Us
-                </a>
+                  Account
+                </Links>
               </NavLink>
             </NavItem>
             <NavItem>
@@ -225,25 +230,36 @@ const Navigbar = ({ login }) => {
             </NavItem>
             <NavItem>
               <NavLink onClick={showSignup} isSignupOpen={isSignupOpen}>
-                {name ? <span> </span> : <span><BiLogInCircle style={{ color: "white" }} />
-                <a
-                  style={{ textDecoration: "none", color: "gray" }}
-                  target="_blank"
-                >
-                  {" "}
-                  Sign Up
-                </a></span>}
-               
+                {name ? (
+                  <span> </span>
+                ) : (
+                  <span>
+                    <BiLogInCircle style={{ color: "white" }} />
+                    <a
+                      style={{ textDecoration: "none", color: "gray" }}
+                      target="_blank"
+                    >
+                      {" "}
+                      Sign Up
+                    </a>
+                  </span>
+                )}
               </NavLink>
             </NavItem>
 
-            <NavItem >
+            <NavItem>
               <NavLink>
                 {" "}
-                <NavDropdown id="" title="Account"  style={{justifyContent:'center',alignItems:'center',display:'flex'}}>
-                  <NavDropdown.Item
-                    
-                  >
+                <NavDropdown
+                  id=""
+                  title="Account"
+                  style={{
+                    justifyContent: "center",
+                    alignItems: "center",
+                    display: "flex",
+                  }}
+                >
+                  <NavDropdown.Item>
                     {name ? (
                       <span>
                         {" "}
@@ -255,10 +271,10 @@ const Navigbar = ({ login }) => {
                         </Link>
                       </span>
                     ) : (
-                      <span>Login</span>
+                      <span onClick={showModal} isLoginOpen={isLoginOpen}>Login</span>
                     )}
                   </NavDropdown.Item>
-                  
+
                   <NavDropdown.Item href="http://127.0.0.1:5000/logout ">
                     {name ? (
                       <span onClick={refreshPage}>Logout</span>
@@ -266,24 +282,17 @@ const Navigbar = ({ login }) => {
                       <span></span>
                     )}
                   </NavDropdown.Item>
-                  <NavDropdown.Item
-                  >
-                    {name ? 
-                      
-                        
-                        <GoogleLogout
-                          clientId="829794049909-usu1p5b3qcvaplttm46h52b2bq9pm16f.apps.googleusercontent.com"
-                          buttonText="Logout"
-                          onLogoutSuccess={logout}
-                        
-                        ></GoogleLogout>
-                    
-                     : 
+                  <NavDropdown.Item>
+                    {name ? (
+                      <GoogleLogout
+                        clientId="829794049909-usu1p5b3qcvaplttm46h52b2bq9pm16f.apps.googleusercontent.com"
+                        buttonText="Logout"
+                        onLogoutSuccess={logout}
+                      ></GoogleLogout>
+                    ) : (
                       <span> </span>
-                      
-                    }
+                    )}
                   </NavDropdown.Item>
-              
                 </NavDropdown>
               </NavLink>
             </NavItem>
@@ -452,7 +461,7 @@ const Navigbar = ({ login }) => {
               </Modal.Body>
             </Modal>
             <Modal show={isLoginOpen} onHide={hideModal}>
-              <Modal.Header >
+              <Modal.Header>
                 <Modal.Title>
                   <div className="container">
                     <div className="col">
