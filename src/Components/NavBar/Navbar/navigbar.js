@@ -280,13 +280,7 @@ const Navigbar = ({ login }) => {
                         ></GoogleLogout>
                     
                      : 
-                      <span> <GoogleLogin
-                      clientId="829794049909-usu1p5b3qcvaplttm46h52b2bq9pm16f.apps.googleusercontent.com"
-                      onSuccess={responseGoogle}
-                      onFailure={responseGoogle}
-                      cookiePolicy={"single_host_origin"}
-                      isSignedIn={true}
-                    /></span>
+                      <span> </span>
                       
                     }
                   </NavDropdown.Item>
