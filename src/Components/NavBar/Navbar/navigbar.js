@@ -242,8 +242,7 @@ const Navigbar = ({ login }) => {
                 {" "}
                 <NavDropdown id="" title="Account"  style={{justifyContent:'center',alignItems:'center',display:'flex'}}>
                   <NavDropdown.Item
-                    onClick={showModal}
-                    isLoginOpen={isLoginOpen}
+                    
                   >
                     {name ? (
                       <span>
