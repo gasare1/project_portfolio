@@ -33,7 +33,7 @@ import { MdEmail } from "react-icons/md";
 import { CgMenuLeft } from "react-icons/cg";
 import { RiMenuFoldLine, RiLoginCircleLine } from "react-icons/ri";
 import { Link as Links } from "react-scroll";
-import {RiFindReplaceLine} from 'react-icons/ri'
+import { RiFindReplaceLine } from "react-icons/ri";
 import {
   Form,
   Button,
@@ -50,11 +50,11 @@ import Register from "./register";
 
 import { makeStyles } from "@material-ui/core/styles";
 import { SiMinutemailer } from "react-icons/si";
-import { FaTimes,FaGithubAlt } from "react-icons/fa";
+import { FaTimes, FaGithubAlt } from "react-icons/fa";
 import Login from "../../LoginSignup/Login";
 import Singin from "../../LoginSignup/Login";
-import {GrProjects} from 'react-icons/gr'
-import {AiOutlineClose} from 'react-icons/ai'
+import { GrProjects } from "react-icons/gr";
+import { AiOutlineClose } from "react-icons/ai";
 const Navigbar = ({ login }) => {
   const [navbar, setNavbar] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -159,7 +159,7 @@ const Navigbar = ({ login }) => {
         }}
       >
         <Collapse isOpen={isOpen} navbar>
-          <NavbarBrand>PORTFOLIO</NavbarBrand>
+          <NavbarBrand style={{ fontFamily: "Comfortaa, cursive" }}>PORTFOLIO</NavbarBrand>
           <Mobilebtn>
             <CgMenuLeft
               style={{ fontSize: "40px", color: "white" }}
@@ -171,7 +171,7 @@ const Navigbar = ({ login }) => {
             <NavItem>
               <NavLink to="/">
                 {" "}
-                <GiHouse style={{ color: "white",marginRight:'5px' }} />{" "}
+                <GiHouse style={{ color: "white", marginRight: "5px" }} />{" "}
                 {name ? (
                   <Link
                     style={{ color: "gray", textDecoration: "none" }}
@@ -192,8 +192,10 @@ const Navigbar = ({ login }) => {
             <NavItem>
               <NavLink onClick={showContactModal} isContactOpen={isContactOpen}>
                 {" "}
-                <RiFindReplaceLine style={{ color: "white",marginRight:'5px' }} />
-                <Links 
+                <RiFindReplaceLine
+                  style={{ color: "white", marginRight: "5px" }}
+                />
+                <Links
                   style={{ color: "gray", textDecoration: "none" }}
                   to="projects"
                 >
@@ -205,7 +207,9 @@ const Navigbar = ({ login }) => {
               <NavLink>
                 {" "}
                 <Links style={{ textDecoration: "none" }} to="contact">
-                  <BsFillQuestionCircleFill style={{ color: "white",marginRight:'5px' }} />
+                  <BsFillQuestionCircleFill
+                    style={{ color: "white", marginRight: "5px" }}
+                  />
 
                   <a
                     style={{ textDecoration: "none", color: "gray" }}
@@ -220,7 +224,7 @@ const Navigbar = ({ login }) => {
 
             <NavItem>
               <NavLink>
-                <FaGithubAlt style={{ color: "white",marginRight:'5px' }} />
+                <FaGithubAlt style={{ color: "white", marginRight: "5px" }} />
                 <a
                   style={{ textDecoration: "none", color: "gray" }}
                   target="_blank"
@@ -262,7 +266,20 @@ const Navigbar = ({ login }) => {
                     display: "flex",
                   }}
                 >
-                  <NavDropdown.Item>
+                  <NavDropdown.Item onClick={showModal} isLoginOpen={isLoginOpen}>
+                    {name ? (
+                      <span>
+                        {" "}
+                      </span>
+                    ) : (
+                      <span >
+                        Login
+                      </span>
+                    )}
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    
+                  >
                     {name ? (
                       <span>
                         {" "}
@@ -274,10 +291,9 @@ const Navigbar = ({ login }) => {
                         </Link>
                       </span>
                     ) : (
-                      <span onClick={showModal} isLoginOpen={isLoginOpen}>Login</span>
+                      <span></span>
                     )}
                   </NavDropdown.Item>
-
                   <NavDropdown.Item href="http://127.0.0.1:5000/logout ">
                     {name ? (
                       <span onClick={refreshPage}>Logout</span>
@@ -315,23 +331,28 @@ const Navigbar = ({ login }) => {
               style={{
                 cursor: "pointer",
                 flexDirection: "column",
-                width: "100vw",fontFamily:'Comfortaa, cursive'
+                width: "100vw",
+                fontFamily: "Comfortaa, cursive",
               }}
               show={ismobileMenu}
               onHide={hideModal}
             >
-              <Modal.Header style={{ background: "#fff" }} >
-               
+              <Modal.Header style={{ background: "#fff" }}>
                 <Modal.Title>
                   <div className="container">
                     <div className="col">
                       <div className="row">
-                        <h1 style={{fontFamily:'Comfortaa, cursive'}}>Mobile Menu</h1>
+                        <h1 style={{ fontFamily: "Comfortaa, cursive" }}>
+                          Mobile Menu
+                        </h1>
                       </div>
                     </div>
                   </div>
                 </Modal.Title>
-                <AiOutlineClose onClick={hideModal} style={{ fontSize:'30px'}}/>
+                <AiOutlineClose
+                  onClick={hideModal}
+                  style={{ fontSize: "30px" }}
+                />
               </Modal.Header>
               <Modal.Body>
                 <Form
@@ -346,151 +367,168 @@ const Navigbar = ({ login }) => {
                   }}
                 >
                   {" "}
-                  <NavItem> 
-              <NavLink to="/" style={{display:"flex"}}>
-                {" "}
-                <GiHouse style={{ color: "gray" }} />{" "}
-                {name ? (
-                  <Link
-                    style={{ color: "gray", textDecoration: "none" }}
-                    to="/"
-                  >
-                    Home
-                  </Link>
-                ) : (
-                  <Links
-                    style={{ color: "gray", textDecoration: "none" }}
-                    to="/"
-                  >
-                    Home
-                  </Links>
-                )}
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink style={{display:"flex"}} onClick={showContactModal} isContactOpen={isContactOpen}>
-                {" "}
-                <RiFindReplaceLine  style={{ color: "gray" }} />{" "}
-                <Links 
-                  style={{ color: "gray", textDecoration: "none" }}
-                  to="projects"
-                >
-                  Projects
-                </Links>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink style={{display:"flex"}}>
-                {" "}
-                <Links style={{ textDecoration: "none" }} to="contact">
-                  <BsFillQuestionCircleFill style={{ color: "gray" }} />
-                  <a
-                    style={{ textDecoration: "none", color: "gray" }}
-                    target="_blank"
-                  >
-                    {" "}
-                    About{" "}
-                  </a>
-                </Links>
-              </NavLink>
-            </NavItem>
-
-            <NavItem>
-              <NavLink style={{display:"flex"}}>
-                <GiReceiveMoney style={{ color: "gray" }} />
-                <a
-                  style={{ textDecoration: "none", color: "gray",cursor:'pointer' }}
-                  target="_blank"
-                  href="https://github.com/gasare1/Call_Mr.Moe"
-                >
-                  {" "}
-                  GitHub
-                </a>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink style={{display:"flex"}}>
-                {" "}
-                <NavDropdown
-                  id=""
-                  title="Account"
-                  style={{
-                    justifyContent: "center",
-                    alignItems: "center",
-                    display: "flex",
-                  }}
-                >
-                  <NavDropdown.Item>
-                    {name ? (
-                      <span>
-                        {" "}
+                  <NavItem>
+                    <NavLink to="/" style={{ display: "flex" }}>
+                      {" "}
+                      <GiHouse style={{ color: "gray" }} />{" "}
+                      {name ? (
                         <Link
-                          style={{ color: "black", textDecoration: "none" }}
-                          to="/profile"
+                          style={{ color: "gray", textDecoration: "none" }}
+                          to="/"
                         >
-                          Account
+                          Home
                         </Link>
-                      </span>
-                    ) : (
-                      <span style={{ color: "black", textDecoration: "none" }} onClick={showModal} isLoginOpen={isLoginOpen}>Login</span>
-                    )}
-                  </NavDropdown.Item>
-
-                  <NavDropdown.Item href="http://127.0.0.1:5000/logout ">
-                    {name ? (
-                      <span onClick={refreshPage}>Logout</span>
-                    ) : (
-                      <span></span>
-                    )}
-                  </NavDropdown.Item>
-                  <NavDropdown.Item>
-                    {name ? (
-                      <GoogleLogout
-                        clientId="829794049909-usu1p5b3qcvaplttm46h52b2bq9pm16f.apps.googleusercontent.com"
-                        buttonText="Logout"
-                        onLogoutSuccess={logout}
-                      ></GoogleLogout>
-                    ) : (
-                      <span> </span>
-                    )}
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink style={{display:"flex"}} onClick={showSignup} isSignupOpen={isSignupOpen}>
-                {name ? (
-                  <span> </span>
-                ) : (
-                  <span>
-                    <BiLogInCircle style={{ color: "gray" }} />
-                    <a
-                      style={{ textDecoration: "none", color: "gray" }}
-                      target="_blank"
+                      ) : (
+                        <Links
+                          style={{ color: "gray", textDecoration: "none" }}
+                          to="/"
+                        >
+                          Home
+                        </Links>
+                      )}
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      style={{ display: "flex" }}
+                      onClick={showContactModal}
+                      isContactOpen={isContactOpen}
                     >
                       {" "}
-                      Sign Up
-                    </a>
-                  </span>
-                )}
-              </NavLink>
-            </NavItem>
-
-            
-            <NavItem  style={{display:"flex"}}>
-              <NavLink onClick={showSignup} isSignupOpen={isSignupOpen}>
-                <a
-                  style={{ textDecoration: "none", color: "gray" }}
-                  target="_blank"
-                >
-                  {" "}
-                  Hi {name} !
-                </a>
-              </NavLink>
-            </NavItem>
-
+                      <RiFindReplaceLine style={{ color: "gray" }} />{" "}
+                      <Links
+                        style={{ color: "gray", textDecoration: "none" }}
+                        to="projects"
+                      >
+                        Projects
+                      </Links>
+                    </NavLink>
+                  </NavItem>
                   <NavItem>
-                    <NavLink style={{display:"flex"}}>
+                    <NavLink style={{ display: "flex" }}>
+                      {" "}
+                      <Links style={{ textDecoration: "none" }} to="contact">
+                        <BsFillQuestionCircleFill style={{ color: "gray" }} />
+                        <a
+                          style={{ textDecoration: "none", color: "gray" }}
+                          target="_blank"
+                        >
+                          {" "}
+                          About{" "}
+                        </a>
+                      </Links>
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink style={{ display: "flex" }}>
+                      <GiReceiveMoney style={{ color: "gray" }} />
+                      <a
+                        style={{
+                          textDecoration: "none",
+                          color: "gray",
+                          cursor: "pointer",
+                        }}
+                        target="_blank"
+                        href="https://github.com/gasare1/Call_Mr.Moe"
+                      >
+                        {" "}
+                        GitHub
+                      </a>
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink style={{ display: "flex" }}>
+                      {" "}
+                      <NavDropdown
+                        id=""
+                        title="Account"
+                        style={{
+                          justifyContent: "center",
+                          alignItems: "center",
+                          display: "flex",
+                        }}
+                      >
+                        <NavDropdown.Item>
+                          {name ? (
+                            <span>
+                              {" "}
+                              <Link
+                                style={{
+                                  color: "black",
+                                  textDecoration: "none",
+                                }}
+                                to="/profile"
+                              >
+                                Account
+                              </Link>
+                            </span>
+                          ) : (
+                            <span
+                              style={{ color: "black", textDecoration: "none" }}
+                              onClick={showModal}
+                              isLoginOpen={isLoginOpen}
+                            >
+                              Login
+                            </span>
+                          )}
+                        </NavDropdown.Item>
+
+                        <NavDropdown.Item href="http://127.0.0.1:5000/logout ">
+                          {name ? (
+                            <span onClick={refreshPage}>Logout</span>
+                          ) : (
+                            <span></span>
+                          )}
+                        </NavDropdown.Item>
+                        <NavDropdown.Item>
+                          {name ? (
+                            <GoogleLogout
+                              clientId="829794049909-usu1p5b3qcvaplttm46h52b2bq9pm16f.apps.googleusercontent.com"
+                              buttonText="Logout"
+                              onLogoutSuccess={logout}
+                            ></GoogleLogout>
+                          ) : (
+                            <span> </span>
+                          )}
+                        </NavDropdown.Item>
+                      </NavDropdown>
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      style={{ display: "flex" }}
+                      onClick={showSignup}
+                      isSignupOpen={isSignupOpen}
+                    >
+                      {name ? (
+                        <span> </span>
+                      ) : (
+                        <span>
+                          <BiLogInCircle style={{ color: "gray" }} />
+                          <a
+                            style={{ textDecoration: "none", color: "gray" }}
+                            target="_blank"
+                          >
+                            {" "}
+                            Sign Up
+                          </a>
+                        </span>
+                      )}
+                    </NavLink>
+                  </NavItem>
+                  <NavItem style={{ display: "flex" }}>
+                    <NavLink onClick={showSignup} isSignupOpen={isSignupOpen}>
+                      <a
+                        style={{ textDecoration: "none", color: "gray" }}
+                        target="_blank"
+                      >
+                        {" "}
+                        Hi {name} !
+                      </a>
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink style={{ display: "flex" }}>
                       <a
                         style={{ textDecoration: "none", color: "gray" }}
                         target="_blank"
@@ -508,7 +546,7 @@ const Navigbar = ({ login }) => {
                   <div className="container">
                     <div className="col">
                       <div className="row">
-                        <h1>Welcome {name}</h1>
+                        <h1 style={{ fontFamily: "Comfortaa, cursive" }}>Welcome {name}</h1>
                       </div>
                     </div>
                   </div>

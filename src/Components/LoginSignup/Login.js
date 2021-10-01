@@ -12,10 +12,10 @@ export default function Singin() {
   const [isAuthorized, setIsAuthorized] = React.useState();
   const [Session, setSession] = useState("");
   const history = useHistory();
- 
+  const [name, setName] = React.useState("");
   const login = async (e) => {
     e.preventDefault();
-    await fetch("http://127.0.0.1:5000/login1", {
+    await fetch("http://127.0.0.1:5000/login", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -23,15 +23,10 @@ export default function Singin() {
         password_hash: password,
       }),
     }).then((response) => {
-      if (response.status == 200) {
-        
-        history.push(
-          <Route
-            path="/profile"
-            component={() => <Profile authorized={isAuthorized} />}
-            exact
-          />
-        );
+      if (response) {
+        console.log(response)
+        setName(response.profileObj.name);
+        history.push("/");
         setSession("You are Logged in. Please close it!");
        
       } else {
@@ -39,7 +34,7 @@ export default function Singin() {
       }
     });
   };
-  const [name, setName] = React.useState("");
+  
   const responseGoogle = (response) => {
     console.log(response);
     console.log(response.profileObj);
@@ -62,7 +57,7 @@ export default function Singin() {
     >
       <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <h1>SIGN IN</h1>
+          <h1 style={{ fontFamily: "Comfortaa, cursive" }}>SIGN IN</h1>
           <Form.Label>Username</Form.Label>
           <Form.Control
             type="username"
