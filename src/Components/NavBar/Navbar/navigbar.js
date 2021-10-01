@@ -366,7 +366,7 @@ const Navigbar = ({ login }) => {
             <NavItem>
               <NavLink style={{display:"flex"}} onClick={showContactModal} isContactOpen={isContactOpen}>
                 {" "}
-                <GrProjects style={{ color: "gray" }} />{" "}
+                <RiFindReplaceLine  style={{ color: "gray" }} />{" "}
                 <Links 
                   style={{ color: "gray", textDecoration: "none" }}
                   to="projects"
