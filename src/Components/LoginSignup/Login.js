@@ -102,7 +102,7 @@ export default function Singin() {
           <hr />
           <Form.Group className="mb-3" controlId="formBasicCheckbox" >
             <GoogleLogin
-              clientId="829794049909-o4c4bu0feuh6rtjs7luuc3mh20purvka.apps.googleusercontent.com"
+              clientId="829794049909-usu1p5b3qcvaplttm46h52b2bq9pm16f.apps.googleusercontent.com"
               onSuccess={responseGoogle}
               onFailure={responseGoogle}
               cookiePolicy={"single_host_origin"}
