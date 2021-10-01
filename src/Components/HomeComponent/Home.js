@@ -113,16 +113,12 @@ const Home = () => {
         </HomeText>
         <HomeContent>
           <HomeH1
-            data-aos="fade-right"
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine"
+           
           >
             Hello World
           </HomeH1>
           <HomeP
-            data-aos="fade-right"
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine"
+            
           >
             Welcome to my web-development portfolio.
           </HomeP>
