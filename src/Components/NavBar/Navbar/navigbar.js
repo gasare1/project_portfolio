@@ -33,6 +33,7 @@ import { MdEmail } from "react-icons/md";
 import { CgMenuLeft } from "react-icons/cg";
 import { RiMenuFoldLine, RiLoginCircleLine } from "react-icons/ri";
 import { Link as Links } from "react-scroll";
+import {RiFindReplaceLine} from 'react-icons/ri'
 import {
   Form,
   Button,
@@ -190,7 +191,7 @@ const Navigbar = ({ login }) => {
             <NavItem>
               <NavLink onClick={showContactModal} isContactOpen={isContactOpen}>
                 {" "}
-                <GrProjects style={{ color: "white" }} />{" "}
+                <RiFindReplaceLine style={{ color: "white" }} />
                 <Links 
                   style={{ color: "gray", textDecoration: "none" }}
                   to="projects"
