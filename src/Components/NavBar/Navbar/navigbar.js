@@ -50,7 +50,7 @@ import Register from "./register";
 
 import { makeStyles } from "@material-ui/core/styles";
 import { SiMinutemailer } from "react-icons/si";
-import { FaTimes } from "react-icons/fa";
+import { FaTimes,FaGithubAlt } from "react-icons/fa";
 import Login from "../../LoginSignup/Login";
 import Singin from "../../LoginSignup/Login";
 import {GrProjects} from 'react-icons/gr'
@@ -171,7 +171,7 @@ const Navigbar = ({ login }) => {
             <NavItem>
               <NavLink to="/">
                 {" "}
-                <GiHouse style={{ color: "white" }} />{" "}
+                <GiHouse style={{ color: "white",marginRight:'5px' }} />{" "}
                 {name ? (
                   <Link
                     style={{ color: "gray", textDecoration: "none" }}
@@ -192,7 +192,7 @@ const Navigbar = ({ login }) => {
             <NavItem>
               <NavLink onClick={showContactModal} isContactOpen={isContactOpen}>
                 {" "}
-                <RiFindReplaceLine style={{ color: "white" }} />
+                <RiFindReplaceLine style={{ color: "white",marginRight:'5px' }} />
                 <Links 
                   style={{ color: "gray", textDecoration: "none" }}
                   to="projects"
@@ -205,7 +205,8 @@ const Navigbar = ({ login }) => {
               <NavLink>
                 {" "}
                 <Links style={{ textDecoration: "none" }} to="contact">
-                  <BsFillQuestionCircleFill style={{ color: "white" }} />
+                  <BsFillQuestionCircleFill style={{ color: "white",marginRight:'5px' }} />
+
                   <a
                     style={{ textDecoration: "none", color: "gray" }}
                     target="_blank"
@@ -219,7 +220,7 @@ const Navigbar = ({ login }) => {
 
             <NavItem>
               <NavLink>
-                <GiReceiveMoney style={{ color: "white" }} />
+                <FaGithubAlt style={{ color: "white",marginRight:'5px' }} />
                 <a
                   style={{ textDecoration: "none", color: "gray" }}
                   target="_blank"

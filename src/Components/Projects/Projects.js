@@ -40,109 +40,38 @@ function Projects() {
       <Card style={{ width: "18rem", margin: "50px" }} className="shadow-lg p-3 mb-5 bg-white rounded"  className="card2"  >
         <Card.Img variant="top" src={image} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>Some Custom text one can write here</Card.Text>
+          <Card.Title>Call Mr Moe</Card.Title>
+          <Card.Text>This is a Real Estate Website that was build with ReactJs Framework and Python Backend</Card.Text>
           <Button variant="primary" href="https://callmrmoe.com">Access Page</Button>
-          <NavDropdown id="" title="Project Discription">
-            <NavDropdown.Item >
-            <h1>Call Mr Moe</h1>
-            <hr/>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. <br/>Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s,<br/> when an unknown printer took a galley
-                of type and scrambled<br/> it to make a type specimen book.<br/> It has
-                survived not only five <br/>centuries, but also the leap into
-                electronic typesetting,<br/> remaining essentially unchanged.<br/> It was
-                popularised in the 1960s<br/> with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like<br/> Aldus PageMaker including versions of
-                Lorem<br/> Ipsum.
-              </p>
-              <hr/>
-            </NavDropdown.Item>
-          </NavDropdown>
+          
         </Card.Body>
+        
       </Card>
       <Card style={{ width: "18rem", margin: "50px" }} className="shadow-lg p-3 mb-5 bg-white rounded"  className="card2">
         <Card.Img variant="top" src={image} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>Some Custom text one can write here</Card.Text>
+          <Card.Title>Call Mr Moe</Card.Title>
+          <Card.Text>This is a Real Estate Website that was build with ReactJs Framework and Python Backend</Card.Text>
           <Button variant="primary">Access Page</Button>
-          <NavDropdown id="" title="Project Discription">
-            <NavDropdown.Item>
-            <h1>Call Mr Moe</h1>
-            <hr/>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. <br/>Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s,<br/> when an unknown printer took a galley
-                of type and scrambled<br/> it to make a type specimen book.<br/> It has
-                survived not only five <br/>centuries, but also the leap into
-                electronic typesetting,<br/> remaining essentially unchanged.<br/> It was
-                popularised in the 1960s<br/> with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like<br/> Aldus PageMaker including versions of
-                Lorem<br/> Ipsum.
-              </p>
-              <hr/>
-            </NavDropdown.Item>
-          </NavDropdown>
+          
         </Card.Body>
       </Card>
       <Card style={{ width: "18rem", margin: "50px" }} className="shadow-lg p-3 mb-5 bg-white rounded"  className="card2">
         <Card.Img variant="top" src={image2} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>Some Custom text one can write here</Card.Text>
+          <Card.Title>Bliss Records</Card.Title>
+          <Card.Text>This is a Record Label Website it was built using Reactjs and Python Backend</Card.Text>
           <Button variant="primary" href="https://blissrecords.net">Access Page</Button>
-          <NavDropdown id="" title="Project Discription">
-            <NavDropdown.Item>
-            <h1>Bliss Records</h1>
-            <hr/>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. <br/>Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s,<br/> when an unknown printer took a galley
-                of type and scrambled<br/> it to make a type specimen book.<br/> It has
-                survived not only five <br/>centuries, but also the leap into
-                electronic typesetting,<br/> remaining essentially unchanged.<br/> It was
-                popularised in the 1960s<br/> with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like<br/> Aldus PageMaker including versions of
-                Lorem<br/> Ipsum.
-              </p>
-              <hr/>
-            </NavDropdown.Item>
-          </NavDropdown>
+          
         </Card.Body>
       </Card>
       <Card style={{ width: "18rem", margin: "50px" }} className="shadow-lg p-3 mb-5 bg-white rounded"  className="card2">
         <Card.Img variant="top" src={image2} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>Some Custom text one can write here</Card.Text>
+          <Card.Title>Bliss Records</Card.Title>
+          <Card.Text>This is a Record Label Website it was built using Reactjs and Python Backend</Card.Text>
           <Button variant="primary">Access Page</Button>
-          <NavDropdown id="" title="Project Discription">
-            <NavDropdown.Item>
-            <h1>Bliss Records</h1>
-            <hr/>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. <br/>Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s,<br/> when an unknown printer took a galley
-                of type and scrambled<br/> it to make a type specimen book.<br/> It has
-                survived not only five <br/>centuries, but also the leap into
-                electronic typesetting,<br/> remaining essentially unchanged.<br/> It was
-                popularised in the 1960s<br/> with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like<br/> Aldus PageMaker including versions of
-                Lorem<br/> Ipsum.
-              </p>
-              <hr/>
-            </NavDropdown.Item>
-          </NavDropdown>
+          
         </Card.Body>
       </Card>
     </ProjHome>

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import video from "../../Images/portback.mp4";
 import { BsBootstrap } from "react-icons/bs";
-import { FaReact, FaHtml5, FaCss3, FaGithubAlt } from "react-icons/fa";
+import { FaReact, FaHtml5, FaCss3, FaGithubAlt,FaPython } from "react-icons/fa";
 import { Form, Modal } from "react-bootstrap";
 import Navigbar from "../NavBar/Navbar/navigbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -24,7 +24,7 @@ import {
 } from "./HomeStyle";
 import { animateScroll as scroll } from "react-scroll";
 import { Button } from "@material-ui/core";
-
+import { SiPostgresql } from "react-icons/si";
 import "aos/dist/aos.css";
 
 import file from "./Profile.pdf";
@@ -76,7 +76,7 @@ const Home = () => {
             data-aos-duration="600"
           >
             Python
-            <FaReact />
+            <FaPython/>
           </HomeContentP>
           <HomeContentP
             data-aos="fade-left"
@@ -84,7 +84,7 @@ const Home = () => {
             data-aos-offset="500"
             data-aos-duration="600"
           >
-            PostgreSQL <FaReact />
+            PostgreSQL <SiPostgresql/>
           </HomeContentP>
           <HomeContentP
             data-aos="fade-left"
