@@ -176,7 +176,7 @@ const Navigbar = ({ login }) => {
                   <GiHouse style={{ color: "white" }} />
                   
                     {" "}
-                   {name ?  <Link onClick={refreshPage} style={{color:'white',textDecoration:'none'}} to='/'>Home</Link>:<Links onClick={refreshPage} style={{color:'white',textDecoration:'none'}} to='/'>Home</Links>  } 
+                   {name ?  <Link  style={{color:'white',textDecoration:'none'}} to='/'>Home</Link>:<Links  style={{color:'white',textDecoration:'none'}} to='/'>Home</Links>  } 
         
                 
               </NavLink>
