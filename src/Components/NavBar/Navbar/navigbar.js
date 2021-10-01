@@ -315,7 +315,7 @@ const Navigbar = ({ login }) => {
               style={{
                 cursor: "pointer",
                 flexDirection: "column",
-                width: "100vw",
+                width: "100vw",fontFamily:'Comfortaa, cursive'
               }}
               show={ismobileMenu}
               onHide={hideModal}
@@ -326,7 +326,7 @@ const Navigbar = ({ login }) => {
                   <div className="container">
                     <div className="col">
                       <div className="row">
-                        <h1>Mobile Menu</h1>
+                        <h1 style={{fontFamily:'Comfortaa, cursive'}}>Mobile Menu</h1>
                       </div>
                     </div>
                   </div>
