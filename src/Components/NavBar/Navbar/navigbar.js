@@ -52,7 +52,7 @@ import { SiMinutemailer } from "react-icons/si";
 import { FaTimes } from "react-icons/fa";
 import Login from "../../LoginSignup/Login";
 import Singin from "../../LoginSignup/Login";
-import { LinkSharp } from "@mui/icons-material";
+import {GrProjects} from 'react-icons/gr'
 const Navigbar = ({ login }) => {
   const [navbar, setNavbar] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -190,12 +190,12 @@ const Navigbar = ({ login }) => {
             <NavItem>
               <NavLink onClick={showContactModal} isContactOpen={isContactOpen}>
                 {" "}
-                <MdEmail style={{ color: "white" }} />{" "}
+                <GrProjects style={{ color: "white" }} />{" "}
                 <Links 
                   style={{ color: "gray", textDecoration: "none" }}
                   to="projects"
                 >
-                  Account
+                  Projects
                 </Links>
               </NavLink>
             </NavItem>
@@ -341,114 +341,150 @@ const Navigbar = ({ login }) => {
                   }}
                 >
                   {" "}
-                  <NavItem>
-                    <NavLink style={{ display: "flex" }}>
-                      {" "}
-                      <Link style={{ textDecoration: "none" }} to="/">
-                        <GiHouse style={{ color: "black" }} />
-                        <a
-                          style={{ textDecoration: "none", color: "gray" }}
-                          target="_blank"
-                        >
-                          {" "}
-                          Home
-                        </a>
-                      </Link>
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      style={{ display: "flex" }}
-                      onClick={showContactModal}
-                      isContactOpen={isContactOpen}
+                  <NavItem> 
+              <NavLink to="/" style={{display:"flex"}}>
+                {" "}
+                <GiHouse style={{ color: "white" }} />{" "}
+                {name ? (
+                  <Link
+                    style={{ color: "gray", textDecoration: "none" }}
+                    to="/"
+                  >
+                    Home
+                  </Link>
+                ) : (
+                  <Links
+                    style={{ color: "gray", textDecoration: "none" }}
+                    to="/"
+                  >
+                    Home
+                  </Links>
+                )}
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink style={{display:"flex"}} onClick={showContactModal} isContactOpen={isContactOpen}>
+                {" "}
+                <GrProjects style={{ color: "gray" }} />{" "}
+                <Links 
+                  style={{ color: "gray", textDecoration: "none" }}
+                  to="projects"
+                >
+                  Projects
+                </Links>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink style={{display:"flex"}}>
+                {" "}
+                <Links style={{ textDecoration: "none" }} to="contact">
+                  <BsFillQuestionCircleFill style={{ color: "gray" }} />
+                  <a
+                    style={{ textDecoration: "none", color: "gray" }}
+                    target="_blank"
+                  >
+                    {" "}
+                    About{" "}
+                  </a>
+                </Links>
+              </NavLink>
+            </NavItem>
+
+            <NavItem>
+              <NavLink style={{display:"flex"}}>
+                <GiReceiveMoney style={{ color: "gray" }} />
+                <a
+                  style={{ textDecoration: "none", color: "gray" }}
+                  target="_blank"
+                  href="https://github.com/gasare1/Call_Mr.Moe"
+                >
+                  {" "}
+                  GitHub
+                </a>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink style={{display:"flex"}} onClick={showSignup} isSignupOpen={isSignupOpen}>
+                {name ? (
+                  <span> </span>
+                ) : (
+                  <span>
+                    <BiLogInCircle style={{ color: "gray" }} />
+                    <a
+                      style={{ textDecoration: "none", color: "gray" }}
+                      target="_blank"
                     >
                       {" "}
-                      <MdEmail />{" "}
-                      <a
-                        style={{ textDecoration: "none", color: "gray" }}
-                        target="_blank"
-                      >
+                      Sign Up
+                    </a>
+                  </span>
+                )}
+              </NavLink>
+            </NavItem>
+
+            <NavItem>
+              <NavLink>
+                {" "}
+                <NavDropdown
+                  id=""
+                  title="Account"
+                  style={{
+                    justifyContent: "center",
+                    alignItems: "center",
+                    display: "flex",
+                  }}
+                >
+                  <NavDropdown.Item>
+                    {name ? (
+                      <span>
                         {" "}
-                        Contact Us
-                      </a>
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink style={{ display: "flex" }}>
-                      {" "}
-                      <Links to="contact">
-                        <BsFillQuestionCircleFill />
-                        <a
-                          style={{ textDecoration: "none", color: "gray" }}
-                          target="_blank"
+                        <Link
+                          style={{ color: "black", textDecoration: "none" }}
+                          to="/profile"
                         >
-                          {" "}
-                          About{" "}
-                        </a>
-                      </Links>
-                    </NavLink>
-                  </NavItem>
+                          Account
+                        </Link>
+                      </span>
+                    ) : (
+                      <span onClick={showModal} isLoginOpen={isLoginOpen}>Login</span>
+                    )}
+                  </NavDropdown.Item>
+
+                  <NavDropdown.Item href="http://127.0.0.1:5000/logout ">
+                    {name ? (
+                      <span onClick={refreshPage}>Logout</span>
+                    ) : (
+                      <span></span>
+                    )}
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    {name ? (
+                      <GoogleLogout
+                        clientId="829794049909-usu1p5b3qcvaplttm46h52b2bq9pm16f.apps.googleusercontent.com"
+                        buttonText="Logout"
+                        onLogoutSuccess={logout}
+                      ></GoogleLogout>
+                    ) : (
+                      <span> </span>
+                    )}
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink onClick={showSignup} isSignupOpen={isSignupOpen}>
+                <a
+                  style={{ textDecoration: "none", color: "gray" }}
+                  target="_blank"
+                >
+                  {" "}
+                  Hi {name} !
+                </a>
+              </NavLink>
+            </NavItem>
+
                   <NavItem>
-                    <NavLink style={{ display: "flex" }}>
-                      {" "}
-                      <Link to="homesearch">
-                        <BsSearch style={{ color: "black" }} />
-                        <a
-                          style={{ textDecoration: "none", color: "gray" }}
-                          target="_blank"
-                        >
-                          {" "}
-                          Search
-                        </a>
-                      </Link>
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink style={{ display: "flex" }}>
-                      <GiReceiveMoney />
-                      <a
-                        style={{ textDecoration: "none", color: "gray" }}
-                        target="_blank"
-                        href="https://valleycasa.com/preferred-lenders/"
-                      >
-                        {" "}
-                        Loan Programs
-                      </a>
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      onClick={showModal}
-                      isLoginOpen={isLoginOpen}
-                      style={{ display: "flex" }}
-                    >
-                      <BiLogInCircle />
-                      <a
-                        style={{ textDecoration: "none", color: "gray" }}
-                        target="_blank"
-                      >
-                        {" "}
-                        Sign Up
-                      </a>
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink style={{ display: "flex" }}>
-                      {" "}
-                      <Link to="buyer" style={{ textDecoration: "none" }}>
-                        <GiHouse style={{ color: "black" }} />
-                        <a
-                          style={{ textDecoration: "none", color: "gray" }}
-                          target="_blank"
-                        >
-                          {" "}
-                          Buyer
-                        </a>
-                      </Link>
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink>
+                    <NavLink style={{display:"flex"}}>
                       <a
                         style={{ textDecoration: "none", color: "gray" }}
                         target="_blank"
