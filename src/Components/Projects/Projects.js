@@ -30,7 +30,7 @@ function Projects() {
         justifyContent: "center",
         display: "flex",
         margin: "50px"
-        
+        ,fontFamily:'Comfortaa, cursive'
         
       }}
      
@@ -40,7 +40,7 @@ function Projects() {
       <Card style={{ width: "18rem", margin: "50px" }} className="shadow-lg p-3 mb-5 bg-white rounded"  className="card2"  >
         <Card.Img variant="top" src={image} />
         <Card.Body>
-          <Card.Title>Call Mr Moe</Card.Title>
+          <Card.Title style={{fontWeight:'bolder'}}>Call Mr Moe</Card.Title>
           <Card.Text>This is a Real Estate Website that was build with ReactJs Framework and Python Backend</Card.Text>
           <Button variant="primary" href="https://callmrmoe.com">Access Page</Button>
           
@@ -50,7 +50,7 @@ function Projects() {
       <Card style={{ width: "18rem", margin: "50px" }} className="shadow-lg p-3 mb-5 bg-white rounded"  className="card2">
         <Card.Img variant="top" src={image} />
         <Card.Body>
-          <Card.Title>Call Mr Moe</Card.Title>
+          <Card.Title style={{fontWeight:'bolder'}}>Call Mr Moe</Card.Title>
           <Card.Text>This is a Real Estate Website that was build with ReactJs Framework and Python Backend</Card.Text>
           <Button variant="primary">Access Page</Button>
           
@@ -59,7 +59,7 @@ function Projects() {
       <Card style={{ width: "18rem", margin: "50px" }} className="shadow-lg p-3 mb-5 bg-white rounded"  className="card2">
         <Card.Img variant="top" src={image2} />
         <Card.Body>
-          <Card.Title>Bliss Records</Card.Title>
+          <Card.Title style={{fontWeight:'bolder'}}>Bliss Records</Card.Title>
           <Card.Text>This is a Record Label Website it was built using Reactjs and Python Backend</Card.Text>
           <Button variant="primary" href="https://blissrecords.net">Access Page</Button>
           
@@ -68,7 +68,7 @@ function Projects() {
       <Card style={{ width: "18rem", margin: "50px" }} className="shadow-lg p-3 mb-5 bg-white rounded"  className="card2">
         <Card.Img variant="top" src={image2} />
         <Card.Body>
-          <Card.Title>Bliss Records</Card.Title>
+          <Card.Title style={{fontWeight:'bolder'}}>Bliss Records</Card.Title>
           <Card.Text>This is a Record Label Website it was built using Reactjs and Python Backend</Card.Text>
           <Button variant="primary">Access Page</Button>
           
