@@ -132,23 +132,26 @@ const Navigbar = ({ login }) => {
 
   const [name, setName] = React.useState("");
   const responseGoogle = (response) => {
+    
     console.log(response);
     console.log(response.profileObj);
     setName(response.profileObj.name);
+    history.push("/profile");
+    
+    
   };
   function refreshPage() {
     window.location.reload();
   }
   return (
     <div style={{ zIndex: "" }}>
-      <GoogleLogin
-        clientId="829794049909-o4c4bu0feuh6rtjs7luuc3mh20purvka.apps.googleusercontent.com"
-        buttonText="Get Your google information"
-        onSuccess={responseGoogle}
-        onFailure={responseGoogle}
-        cookiePolicy={"single_host_origin"}
-        isSignedIn={true}
-      />
+       <GoogleLogin
+                      clientId="829794049909-o4c4bu0feuh6rtjs7luuc3mh20purvka.apps.googleusercontent.com"
+                      onSuccess={responseGoogle}
+                      onFailure={responseGoogle}
+                      cookiePolicy={"single_host_origin"}
+                      isSignedIn={true}
+                    />
       <Navbar
         style={{
           transition: "1s ease",
@@ -173,7 +176,7 @@ const Navigbar = ({ login }) => {
                   <GiHouse style={{ color: "white" }} />
                   
                     {" "}
-                   {name ?  <Link style={{color:'white',textDecoration:'none'}} to='/'>Home</Link>:<span>Home</span>  } 
+                   {name ?  <Link onClick={refreshPage} style={{color:'white',textDecoration:'none'}} to='/'>Home</Link>:<span>Home</span>  } 
         
                 
               </NavLink>
@@ -234,10 +237,10 @@ const Navigbar = ({ login }) => {
               </NavLink>
             </NavItem>
 
-            <NavItem>
+            <NavItem >
               <NavLink>
                 {" "}
-                <NavDropdown id="" title="Account">
+                <NavDropdown id="" title="Account"  style={{justifyContent:'center',alignItems:'center',display:'flex'}}>
                   <NavDropdown.Item
                     onClick={showModal}
                     isLoginOpen={isLoginOpen}
@@ -256,6 +259,7 @@ const Navigbar = ({ login }) => {
                       <span>Login</span>
                     )}
                   </NavDropdown.Item>
+                  
                   <NavDropdown.Item href="http://127.0.0.1:5000/logout ">
                     {name ? (
                       <span onClick={refreshPage}>Logout</span>
@@ -265,20 +269,28 @@ const Navigbar = ({ login }) => {
                   </NavDropdown.Item>
                   <NavDropdown.Item
                   >
-                    {name ? (
-                      <span>
-                        {" "}
+                    {name ? 
+                      
+                        
                         <GoogleLogout
                           clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
                           buttonText="Logout"
                           onLogoutSuccess={logout}
                         
-                        ></GoogleLogout>{" "}
-                      </span>
-                    ) : (
-                      <span></span>
-                    )}
+                        ></GoogleLogout>
+                    
+                     : 
+                      <span> <GoogleLogin
+                      clientId="829794049909-o4c4bu0feuh6rtjs7luuc3mh20purvka.apps.googleusercontent.com"
+                      onSuccess={responseGoogle}
+                      onFailure={responseGoogle}
+                      cookiePolicy={"single_host_origin"}
+                      isSignedIn={true}
+                    /></span>
+                      
+                    }
                   </NavDropdown.Item>
+              
                 </NavDropdown>
               </NavLink>
             </NavItem>
