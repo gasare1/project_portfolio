@@ -54,6 +54,7 @@ import { FaTimes } from "react-icons/fa";
 import Login from "../../LoginSignup/Login";
 import Singin from "../../LoginSignup/Login";
 import {GrProjects} from 'react-icons/gr'
+import {AiOutlineClose} from 'react-icons/ai'
 const Navigbar = ({ login }) => {
   const [navbar, setNavbar] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -318,7 +319,8 @@ const Navigbar = ({ login }) => {
               show={ismobileMenu}
               onHide={hideModal}
             >
-              <Modal.Header style={{ background: "#000" }} closeButton>
+              <Modal.Header style={{ background: "#fff" }} >
+               
                 <Modal.Title>
                   <div className="container">
                     <div className="col">
@@ -328,6 +330,7 @@ const Navigbar = ({ login }) => {
                     </div>
                   </div>
                 </Modal.Title>
+                <AiOutlineClose onClick={hideModal} style={{ fontSize:'30px'}}/>
               </Modal.Header>
               <Modal.Body>
                 <Form
@@ -345,7 +348,7 @@ const Navigbar = ({ login }) => {
                   <NavItem> 
               <NavLink to="/" style={{display:"flex"}}>
                 {" "}
-                <GiHouse style={{ color: "white" }} />{" "}
+                <GiHouse style={{ color: "gray" }} />{" "}
                 {name ? (
                   <Link
                     style={{ color: "gray", textDecoration: "none" }}
@@ -395,7 +398,7 @@ const Navigbar = ({ login }) => {
               <NavLink style={{display:"flex"}}>
                 <GiReceiveMoney style={{ color: "gray" }} />
                 <a
-                  style={{ textDecoration: "none", color: "gray" }}
+                  style={{ textDecoration: "none", color: "gray",cursor:'pointer' }}
                   target="_blank"
                   href="https://github.com/gasare1/Call_Mr.Moe"
                 >
@@ -405,26 +408,7 @@ const Navigbar = ({ login }) => {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink style={{display:"flex"}} onClick={showSignup} isSignupOpen={isSignupOpen}>
-                {name ? (
-                  <span> </span>
-                ) : (
-                  <span>
-                    <BiLogInCircle style={{ color: "gray" }} />
-                    <a
-                      style={{ textDecoration: "none", color: "gray" }}
-                      target="_blank"
-                    >
-                      {" "}
-                      Sign Up
-                    </a>
-                  </span>
-                )}
-              </NavLink>
-            </NavItem>
-
-            <NavItem>
-              <NavLink>
+              <NavLink style={{display:"flex"}}>
                 {" "}
                 <NavDropdown
                   id=""
@@ -447,7 +431,7 @@ const Navigbar = ({ login }) => {
                         </Link>
                       </span>
                     ) : (
-                      <span onClick={showModal} isLoginOpen={isLoginOpen}>Login</span>
+                      <span style={{ color: "black", textDecoration: "none" }} onClick={showModal} isLoginOpen={isLoginOpen}>Login</span>
                     )}
                   </NavDropdown.Item>
 
@@ -473,6 +457,26 @@ const Navigbar = ({ login }) => {
               </NavLink>
             </NavItem>
             <NavItem>
+              <NavLink style={{display:"flex"}} onClick={showSignup} isSignupOpen={isSignupOpen}>
+                {name ? (
+                  <span> </span>
+                ) : (
+                  <span>
+                    <BiLogInCircle style={{ color: "gray" }} />
+                    <a
+                      style={{ textDecoration: "none", color: "gray" }}
+                      target="_blank"
+                    >
+                      {" "}
+                      Sign Up
+                    </a>
+                  </span>
+                )}
+              </NavLink>
+            </NavItem>
+
+            
+            <NavItem  style={{display:"flex"}}>
               <NavLink onClick={showSignup} isSignupOpen={isSignupOpen}>
                 <a
                   style={{ textDecoration: "none", color: "gray" }}
