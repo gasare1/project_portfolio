@@ -44,7 +44,7 @@ export default function Singin() {
     console.log(response);
     console.log(response.profileObj);
     setName(response.profileObj.name);
-    history.push("/profile");
+    history.push("/");
     window.location.reload();
     
   };
