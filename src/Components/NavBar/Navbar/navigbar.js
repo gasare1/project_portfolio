@@ -136,7 +136,7 @@ const Navigbar = ({ login }) => {
     console.log(response);
     console.log(response.profileObj);
     setName(response.profileObj.name);
-    history.push("/profile");
+    history.push("/");
     
     
   };
@@ -176,7 +176,7 @@ const Navigbar = ({ login }) => {
                   <GiHouse style={{ color: "white" }} />
                   
                     {" "}
-                   {name ?  <Link onClick={refreshPage} style={{color:'white',textDecoration:'none'}} to='/'>Home</Link>:<span>Home</span>  } 
+                   {name ?  <Link onClick={refreshPage} style={{color:'white',textDecoration:'none'}} to='/'>Home</Link>:<Links onClick={refreshPage} style={{color:'white',textDecoration:'none'}} to='/'>Home</Links>  } 
         
                 
               </NavLink>
