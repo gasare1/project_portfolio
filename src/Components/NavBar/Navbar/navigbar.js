@@ -111,9 +111,9 @@ const Navigbar = ({ login }) => {
     async function fetchMyAPI() {
       let result = await axios.get("https://glenasare15.pythonanywhere.com");
 
-      setName(result.data.email);
+      
 
-      console.log(result.data);
+      console.log(result);
     }
 
     fetchMyAPI();

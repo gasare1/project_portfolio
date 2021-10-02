@@ -30,11 +30,12 @@ export default function Singin() {
     })
       .then((response) => {
         if (response.status === 200) {
+          console.log(response);
           console.log(response.data);
           setName(response.data);
           console.log("SUCCESSS");
           history.push("/");
-          window.location.reload();
+          
           return response.json();
         } else if (response.status === 408) {
           console.log("SOMETHING WENT WRONG");
