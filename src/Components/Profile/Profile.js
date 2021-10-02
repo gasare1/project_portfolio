@@ -3,6 +3,7 @@ import video from "../../Images/profilevideo.mp4";
 import { BsBootstrap } from "react-icons/bs";
 import { FaReact, FaHtml5, FaCss3, FaGithubAlt } from "react-icons/fa";
 import GoogleLogin from "react-google-login";
+import useFetch from "react-fetch-hook"
 import { Form, Modal } from "react-bootstrap";
 import {
 
@@ -27,11 +28,36 @@ import Navigbar from "../NavBar/Navbar/navigbar";
 import Profilenav from "./Profilenav";
 import Userprofile from "./Userprofile";
 import { useHistory, Route } from "react-router-dom";
+import axios from "axios";
 const Profile = () => {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
+    getAllNames();
   }, []);
+  const url = ''
+
+  const [name2, setName2] = React.useState("");
+  const getAllNames = () => {
+    axios.get(`${url}`)
+    .then((response)=>{
+      const allNames = response.data.name2.allNames;
+      console.log("Your user name is "+allNames)
+      setName2(allNames)
+    })
+    .catch(error=>console.error(`Error: ${error}`));
+  }
+  
+  useEffect(() => {
+    async function fetchMyAPI() {
+      let result = await axios.get("http://127.0.0.1:5000/login")
+      setName(result.data.email)
+      console.log(result.data)
+    }
+
+    fetchMyAPI()
+  }, [])
+ 
   const onDownload = () => {
     const link = document.createElement("a");
     link.download = `Profile.pdf`;
@@ -58,6 +84,7 @@ const Profile = () => {
   
   const history = useHistory();
   const [name, setName] = React.useState("");
+  
   const responseGoogle = (response) => {
     isAuthorized = isAuthorized
     localStorage.setItem("token", window.location.search.split("=")[1])
@@ -67,8 +94,9 @@ const Profile = () => {
     history.push("/profile");
     
   };
-  
-  
+
+
+ 
   
   if (name === {name}){
     return <Redirect to="/"/>
@@ -83,6 +111,7 @@ const Profile = () => {
          
         </HomeBg>
         <HomeContent>
+          
         <GoogleLogin
               clientId="829794049909-o4c4bu0feuh6rtjs7luuc3mh20purvka.apps.googleusercontent.com"
               buttonText="Get Your google information"
@@ -95,11 +124,12 @@ const Profile = () => {
       
           >
             
-           Welcome {name}
+           Welcome {name}{name2}
           </HomeH1>
           <HomeP
             
           >
+            
             Welcome to your profile page.
           </HomeP>
         </HomeContent>

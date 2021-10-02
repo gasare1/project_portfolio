@@ -99,6 +99,7 @@ const Navigbar = ({ login }) => {
   const showMobileModal = () => {
     setmobileMenu(true);
   };
+  const [message, setMessage] = React.useState("");
   const changeBackground = () => {
     if (window.screenY >= 80) {
       setNavbar(true);
@@ -106,6 +107,17 @@ const Navigbar = ({ login }) => {
       setNavbar(false);
     }
   };
+  useEffect(() => {
+    async function fetchMyAPI() {
+      let result = await axios.get("http://127.0.0.1:5000/login");
+
+      setName(result.data.email);
+
+      console.log(result.data);
+    }
+
+    fetchMyAPI();
+  }, []);
 
   const [navBackground, setNavBackground] = useState(false);
   const navRef = useRef();
@@ -138,10 +150,30 @@ const Navigbar = ({ login }) => {
     console.log(response.profileObj);
     setName(response.profileObj.name);
     history.push("/");
+    
   };
   function refreshPage() {
     window.location.reload();
   }
+
+  const logout1 = async (e) => {
+    e.preventDefault();
+    await fetch("https://glenasare15.pythonanywhere.com/logout", {
+      method: "get",
+      headers: { "Content-Type": "application/json" },
+    }).then((response) => {
+      if (response) {
+        console.log(response);
+        console.log("SUCCESSS");
+        history.push("/");
+        window.location.reload();
+        return response.json();
+      } else if (response.status === 408) {
+        console.log("SOMETHING WENT WRONG");
+        this.setState({ requestFailed: true });
+      }
+    });
+  };
   return (
     <div style={{ zIndex: "" }}>
       <GoogleLogin
@@ -159,7 +191,9 @@ const Navigbar = ({ login }) => {
         }}
       >
         <Collapse isOpen={isOpen} navbar>
-          <NavbarBrand style={{ fontFamily: "Comfortaa, cursive" }}>PORTFOLIO</NavbarBrand>
+          <NavbarBrand style={{ fontFamily: "Comfortaa, cursive" }}>
+            PORTFOLIO
+          </NavbarBrand>
           <Mobilebtn>
             <CgMenuLeft
               style={{ fontSize: "40px", color: "white" }}
@@ -223,7 +257,10 @@ const Navigbar = ({ login }) => {
             </NavItem>
 
             <NavItem>
-              <NavLink>
+              <NavLink
+                target="_blank"
+                href="https://github.com/gasare1/Call_Mr.Moe"
+              >
                 <FaGithubAlt style={{ color: "white", marginRight: "5px" }} />
                 <a
                   style={{ textDecoration: "none", color: "gray" }}
@@ -266,20 +303,13 @@ const Navigbar = ({ login }) => {
                     display: "flex",
                   }}
                 >
-                  <NavDropdown.Item onClick={showModal} isLoginOpen={isLoginOpen}>
-                    {name ? (
-                      <span>
-                        {" "}
-                      </span>
-                    ) : (
-                      <span >
-                        Login
-                      </span>
-                    )}
-                  </NavDropdown.Item>
                   <NavDropdown.Item
-                    
+                    onClick={showModal}
+                    isLoginOpen={isLoginOpen}
                   >
+                    {name ? <span> </span> : <span>Login</span>}
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
                     {name ? (
                       <span>
                         {" "}
@@ -294,9 +324,11 @@ const Navigbar = ({ login }) => {
                       <span></span>
                     )}
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="http://127.0.0.1:5000/logout ">
+                  <NavDropdown.Item>
                     {name ? (
-                      <span onClick={refreshPage}>Logout</span>
+                      <span>
+                        <a onClick={logout1}>Logout</a>
+                      </span>
                     ) : (
                       <span></span>
                     )}
@@ -546,7 +578,9 @@ const Navigbar = ({ login }) => {
                   <div className="container">
                     <div className="col">
                       <div className="row">
-                        <h1 style={{ fontFamily: "Comfortaa, cursive" }}>Welcome {name}</h1>
+                        <h1 style={{ fontFamily: "Comfortaa, cursive" }}>
+                          Welcome {name}
+                        </h1>
                       </div>
                     </div>
                   </div>
@@ -574,6 +608,7 @@ const Navigbar = ({ login }) => {
                 </Modal.Title>
               </Modal.Header>
               <Modal.Body>
+                {message}
                 <Form>
                   <Signup />
                 </Form>

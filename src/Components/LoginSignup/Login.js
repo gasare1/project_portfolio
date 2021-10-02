@@ -7,56 +7,56 @@ import Profile from "../Profile/Profile";
 import App from "../../App";
 export default function Singin() {
   const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
+  const [email, setUsername] = useState("");
   const [redirect, setRedirect] = useState(false);
   const [isAuthorized, setIsAuthorized] = React.useState();
   const [Session, setSession] = useState("");
-  const history = useHistory();
+  var history = useHistory();
   const [name, setName] = React.useState("");
-  const[name2,setName2] = React.useState("");
+  const [name2, setName2] = React.useState("");
   const [loading, setLoading] = useState(false);
-  const [state,setState] = useState(false)
+  const [state, setState] = useState(false);
   const login = async (e) => {
     setLoading(true);
     setState(true);
     e.preventDefault();
-    await fetch("http://127.0.0.1:5000/login", {
+    await fetch("https://glenasare15.pythonanywhere.com/login", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        username: username,
+        email: email,
         password_hash: password,
       }),
-      
     })
-    
-    .then((response) => {
-      <Redirect to='/profile'/>
-      if(response.status === 200){
-          <Redirect to='/profile'/>
-          console.log("SUCCESSS")
-          return response.json();     
-      }else if(response.status === 408){
-          console.log("SOMETHING WENT WRONG")
-          this.setState({ requestFailed: true })
-      }
-  })
-  .then((data) => {
-      setName2(data.email)
-      setState({ isLoading: false, downlines: data.response })
-      console.log("DATA STORED")
-  })
+      .then((response) => {
+        if (response.status === 200) {
+          console.log(response.data);
+          setName(response.data);
+          console.log("SUCCESSS");
+          history.push("/");
+          window.location.reload();
+          return response.json();
+        } else if (response.status === 408) {
+          console.log("SOMETHING WENT WRONG");
+          this.setState({ requestFailed: true });
+        }
+      })
+      .then((data) => {
+        console.log(data);
+
+        setState({ isLoading: false, downlines: data.response });
+        console.log("DATA STORED" + data);
+      });
   };
-  
+
   const responseGoogle = (response) => {
     console.log(response);
     console.log(response.profileObj);
     setName(response.profileObj.name);
     history.push("/");
     window.location.reload();
-    
   };
-  console.log(name2)
+  console.log(name2);
   return (
     <div
       onSubmit={login}
@@ -108,7 +108,7 @@ export default function Singin() {
           </Form.Group>
           <br />
           <hr />
-          <Form.Group className="mb-3" controlId="formBasicCheckbox" >
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <GoogleLogin
               clientId="829794049909-usu1p5b3qcvaplttm46h52b2bq9pm16f.apps.googleusercontent.com"
               onSuccess={responseGoogle}
