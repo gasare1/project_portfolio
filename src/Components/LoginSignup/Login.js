@@ -20,7 +20,7 @@ export default function Singin() {
     setLoading(true);
     setState(true);
     e.preventDefault();
-    await fetch("https://glenasare15.pythonanywhere.com/login", {
+    await fetch("http://127.0.0.1:5000/login", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
