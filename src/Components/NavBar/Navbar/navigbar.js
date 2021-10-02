@@ -109,7 +109,7 @@ const Navigbar = ({ login }) => {
   };
   useEffect(() => {
     async function fetchMyAPI() {
-      let result = await axios.get("http://127.0.0.1:5000/login");
+      let result = await axios.get("https://glenasare15.pythonanywhere.com");
 
       setName(result.data.email);
 
