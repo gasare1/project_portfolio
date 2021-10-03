@@ -251,7 +251,7 @@ const Navigbar = ({ login }) => {
               </NavLink>
             </NavItem>
 
-            <NavItem>
+            <NavItem id="navbarlink">
               <FaGithubAlt
                 style={{ color: "white", marginRight: "5px", fontSize: "20px" }}
               />
@@ -268,8 +268,8 @@ const Navigbar = ({ login }) => {
                 GitHub
               </a>
             </NavItem>
-            <NavItem>
-              <AiFillLinkedin style={{ color: "white", fontSize: "20px" }} />
+            <NavItem id="navbarlink"style={{ color: "white", fontSize: "20px" }} >
+              <AiFillLinkedin  />
               <a
                 style={{
                   textDecoration: "none",

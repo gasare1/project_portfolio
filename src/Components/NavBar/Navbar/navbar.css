@@ -29,3 +29,9 @@
 .navtext:hover:after{
   -webkit-animation: circle 1.5s ease-in forwards;
 }
+
+@media only screen and (max-width: 600px) {
+  #navbarlink{
+    display: none;
+  }
+}

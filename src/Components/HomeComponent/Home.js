@@ -26,7 +26,7 @@ import { animateScroll as scroll } from "react-scroll";
 import { Button } from "@material-ui/core";
 import { SiPostgresql } from "react-icons/si";
 import "aos/dist/aos.css";
-
+import './home.css'
 import file from "./Profile.pdf";
 
 const Home = () => {
@@ -111,7 +111,7 @@ const Home = () => {
             GitHub <FaGithubAlt />
           </HomeContentP>
         </HomeText>
-        <HomeContent>
+        <HomeContent id='homecontent'>
           <HomeH1
            
           >
