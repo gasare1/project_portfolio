@@ -47,16 +47,14 @@ const Profile = () => {
     })
     .catch(error=>console.error(`Error: ${error}`));
   }
-  
   useEffect(() => {
-    async function fetchMyAPI() {
-      let result = await axios.get("https://glenasare15.pythonanywhere.com")
-      setName(result.data.email)
-      console.log(result.data)
-    }
+    const firstname = localStorage.getItem('firstname')
+    setName(firstname)
 
-    fetchMyAPI()
+    
   }, [])
+  
+ 
  
   const onDownload = () => {
     const link = document.createElement("a");

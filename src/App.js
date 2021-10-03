@@ -11,35 +11,29 @@ import Profilenav from "./Components/Profile/Profilenav";
 import ReactSession from "react-client-session";
 import React from "react";
 import GoogleLogin from "react-google-login";
-
+import About from "./Components/About/About";
+import Footers from "./Components/Footer/Footer";
 
 function App() {
-
- 
-
-
   return (
-    
     <div className="d-flex flex-column h-100">
-      
-     
       <Router>
-     
-      <ScrollToTop />
-        <Navigbar/>
+        <ScrollToTop />
+        <Navigbar />
         <Switch />
         <Route path="/" component={Home} exact>
-            <Home/>
-          </Route>
-          <Route path="/" component={Projects} exact>
-            <Projects />
-          </Route>
-          
-        <Route
-          path="/profile"
-          component={() => <Profile />}
-          exact
-        />
+          <Home />
+        </Route>
+        <Route path="/" component={Projects} exact>
+          <Projects />
+        </Route>
+        <Route path="/" component={About} exact>
+          <About />
+        </Route> <Route path="/" component={Footers} exact>
+          <Footers />
+        </Route>
+
+        <Route path="/profile" component={() => <Profile />} exact />
       </Router>
     </div>
   );

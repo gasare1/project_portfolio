@@ -54,7 +54,8 @@ import { FaTimes, FaGithubAlt } from "react-icons/fa";
 import Login from "../../LoginSignup/Login";
 import Singin from "../../LoginSignup/Login";
 import { GrProjects } from "react-icons/gr";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiFillLinkedin, AiOutlineClose } from "react-icons/ai";
+import { useLocalStorage } from "../../Store/localStorage";
 const Navigbar = ({ login }) => {
   const [navbar, setNavbar] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -108,15 +109,8 @@ const Navigbar = ({ login }) => {
     }
   };
   useEffect(() => {
-    async function fetchMyAPI() {
-      let result = await axios.get("https://glenasare15.pythonanywhere.com");
-
-      
-
-      console.log(result);
-    }
-
-    fetchMyAPI();
+    const firstname = localStorage.getItem("firstname");
+    setName(firstname);
   }, []);
 
   const [navBackground, setNavBackground] = useState(false);
@@ -141,6 +135,7 @@ const Navigbar = ({ login }) => {
   const logout = (response) => {
     console.log(response);
     history.push("/");
+
     window.location.reload();
   };
 
@@ -150,7 +145,6 @@ const Navigbar = ({ login }) => {
     console.log(response.profileObj);
     setName(response.profileObj.name);
     history.push("/");
-    
   };
   function refreshPage() {
     window.location.reload();
@@ -165,6 +159,7 @@ const Navigbar = ({ login }) => {
       if (response) {
         console.log(response);
         console.log("SUCCESSS");
+        localStorage.removeItem("firstname");
         history.push("/");
         window.location.reload();
         return response.json();
@@ -192,7 +187,7 @@ const Navigbar = ({ login }) => {
       >
         <Collapse isOpen={isOpen} navbar>
           <NavbarBrand style={{ fontFamily: "Comfortaa, cursive" }}>
-            PORTFOLIO
+            Glen Asare
           </NavbarBrand>
           <Mobilebtn>
             <CgMenuLeft
@@ -240,7 +235,7 @@ const Navigbar = ({ login }) => {
             <NavItem>
               <NavLink>
                 {" "}
-                <Links style={{ textDecoration: "none" }} to="contact">
+                <Links style={{ textDecoration: "none" }} to="about">
                   <BsFillQuestionCircleFill
                     style={{ color: "white", marginRight: "5px" }}
                   />
@@ -257,20 +252,37 @@ const Navigbar = ({ login }) => {
             </NavItem>
 
             <NavItem>
-              <NavLink
-                target="_blank"
-                href="https://github.com/gasare1/Call_Mr.Moe"
+              <FaGithubAlt
+                style={{ color: "white", marginRight: "5px", fontSize: "20px" }}
+              />
+              <a
+                style={{
+                  textDecoration: "none",
+                  color: "gray",
+                  fontSize: "20px",
+                }}
+                href="https://github.com/gasare1"
+                target="blank"
               >
-                <FaGithubAlt style={{ color: "white", marginRight: "5px" }} />
-                <a
-                  style={{ textDecoration: "none", color: "gray" }}
-                  target="_blank"
-                  href="https://github.com/gasare1/Call_Mr.Moe"
-                >
-                  {" "}
-                  GitHub
-                </a>
-              </NavLink>
+                {" "}
+                GitHub
+              </a>
+            </NavItem>
+            <NavItem>
+              <AiFillLinkedin style={{ color: "white", fontSize: "20px" }} />
+              <a
+                style={{
+                  textDecoration: "none",
+                  color: "gray",
+                  cursor: "pointer",
+                  fontSize: "20px",
+                }}
+                href="https://www.linkedin.com/in/glen-asare-6b1bb61a2/"
+                target="blank"
+              >
+                {" "}
+                LinkedIn
+              </a>
             </NavItem>
             <NavItem>
               <NavLink onClick={showSignup} isSignupOpen={isSignupOpen}>
@@ -381,6 +393,7 @@ const Navigbar = ({ login }) => {
                     </div>
                   </div>
                 </Modal.Title>
+
                 <AiOutlineClose
                   onClick={hideModal}
                   style={{ fontSize: "30px" }}
@@ -402,17 +415,17 @@ const Navigbar = ({ login }) => {
                   <NavItem>
                     <NavLink to="/" style={{ display: "flex" }}>
                       {" "}
-                      <GiHouse style={{ color: "gray" }} />{" "}
+                      <GiHouse style={{ color: "black" }} />{" "}
                       {name ? (
                         <Link
-                          style={{ color: "gray", textDecoration: "none" }}
+                          style={{ color: "black", textDecoration: "none" }}
                           to="/"
                         >
                           Home
                         </Link>
                       ) : (
                         <Links
-                          style={{ color: "gray", textDecoration: "none" }}
+                          style={{ color: "black", textDecoration: "none" }}
                           to="/"
                         >
                           Home
@@ -427,9 +440,9 @@ const Navigbar = ({ login }) => {
                       isContactOpen={isContactOpen}
                     >
                       {" "}
-                      <RiFindReplaceLine style={{ color: "gray" }} />{" "}
+                      <RiFindReplaceLine style={{ color: "black" }} />{" "}
                       <Links
-                        style={{ color: "gray", textDecoration: "none" }}
+                        style={{ color: "black", textDecoration: "none" }}
                         to="projects"
                       >
                         Projects
@@ -440,9 +453,9 @@ const Navigbar = ({ login }) => {
                     <NavLink style={{ display: "flex" }}>
                       {" "}
                       <Links style={{ textDecoration: "none" }} to="contact">
-                        <BsFillQuestionCircleFill style={{ color: "gray" }} />
+                        <BsFillQuestionCircleFill style={{ color: "black" }} />
                         <a
-                          style={{ textDecoration: "none", color: "gray" }}
+                          style={{ textDecoration: "none", color: "black" }}
                           target="_blank"
                         >
                           {" "}
@@ -453,11 +466,11 @@ const Navigbar = ({ login }) => {
                   </NavItem>
                   <NavItem>
                     <NavLink style={{ display: "flex" }}>
-                      <GiReceiveMoney style={{ color: "gray" }} />
+                      <GiReceiveMoney style={{ color: "black" }} />
                       <a
                         style={{
                           textDecoration: "none",
-                          color: "gray",
+                          color: "black",
                           cursor: "pointer",
                         }}
                         target="_blank"
@@ -470,7 +483,25 @@ const Navigbar = ({ login }) => {
                   </NavItem>
                   <NavItem>
                     <NavLink style={{ display: "flex" }}>
+                      <AiFillLinkedin style={{ color: "black" }} />
+                      <a
+                        style={{
+                          textDecoration: "none",
+                          color: "black",
+                          cursor: "pointer",
+                        }}
+                        target="_blank"
+                        href="https://github.com/gasare1/Call_Mr.Moe"
+                      >
+                        {" "}
+                        LinkedIn
+                      </a>
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink style={{ display: "flex" }}>
                       {" "}
+                      {name}
                       <NavDropdown
                         id=""
                         title="Account"
@@ -551,11 +582,11 @@ const Navigbar = ({ login }) => {
                   <NavItem style={{ display: "flex" }}>
                     <NavLink onClick={showSignup} isSignupOpen={isSignupOpen}>
                       <a
-                        style={{ textDecoration: "none", color: "gray" }}
+                        style={{ textDecoration: "none", color: "black" }}
                         target="_blank"
                       >
                         {" "}
-                        Hi {name} !
+                        Hi <span style={{ color: "black" }}>{name} !</span>
                       </a>
                     </NavLink>
                   </NavItem>

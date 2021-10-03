@@ -29,7 +29,7 @@ function Projects() {
         
         justifyContent: "center",
         display: "flex",
-        margin: "50px"
+        margin: "100px"
         ,fontFamily:'Comfortaa, cursive'
         
       }}

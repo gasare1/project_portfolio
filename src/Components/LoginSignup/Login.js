@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState,useEffect } from "react";
 import axios from "axios";
 import { Form, Button, Modal, Row, Col } from "react-bootstrap";
 import { Link, Redirect, useHistory, Route } from "react-router-dom";
@@ -24,18 +24,20 @@ export default function Singin() {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        email: email,
-        password_hash: password,
+        "email": email,
+        "password_hash": password,
       }),
     })
       .then((response) => {
         if (response.status === 200) {
-          console.log(response);
+          
           console.log(response.data);
-          setName(response.data);
+          setName(response);
           console.log("SUCCESSS");
           history.push("/");
-          
+          const firstname = localStorage.getItem('firstname')
+          setName(firstname)
+          window.location.reload();
           return response.json();
         } else if (response.status === 408) {
           console.log("SOMETHING WENT WRONG");
@@ -44,8 +46,9 @@ export default function Singin() {
       })
       .then((data) => {
         console.log(data);
-
-        setState({ isLoading: false, downlines: data.response });
+        localStorage.setItem('firstname', data);
+        
+        
         console.log("DATA STORED" + data);
       });
   };
