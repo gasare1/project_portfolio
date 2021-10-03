@@ -108,7 +108,7 @@ export const Menu = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background:#0000ffff;
 `;
 export const MenuButton = styled(Link)`
   cursor: pointer;
