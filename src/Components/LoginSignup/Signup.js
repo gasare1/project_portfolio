@@ -25,7 +25,7 @@ const Register = () => {
   };
   const submit = async (e) => {
     e.preventDefault();
-    await fetch(" https://glenasare15.pythonanywhere.com/portfolioregister", {
+    await fetch("https://glenasare15.pythonanywhere.com/portfolioregister", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
