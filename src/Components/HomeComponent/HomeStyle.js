@@ -102,7 +102,7 @@ export const HomeP = styled.p`
 `;
 export const Button = styled.button`
   margin-top: 20px;
-  @media screen and (max-width: 700) {
+  @media screen and (max-width: 150) {
    margin-left:-100px;
    
   }
@@ -127,7 +127,7 @@ export const HomeContentP = styled.p`
   font-size: 20px;
   z-index:99;
   font-family: "Indie Flower", cursive;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1054px) {
     margin-top: 10px;
     margin-top: -5rem;
   }

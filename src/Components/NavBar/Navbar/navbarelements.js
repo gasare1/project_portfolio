@@ -23,7 +23,7 @@ export const NavLink = styled(Links)`
     color: gray;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1054px) {
     display: none;
   }
 `;
@@ -34,7 +34,7 @@ export const Navbar = styled.nav`
   width: 100%; /* Full width */
 
   z-index: 100;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1054px) {
     width: 100%;
   }
   &.active {
@@ -81,7 +81,7 @@ export const Wrapper = styled.div`
 
   transform: translateY(${(p) => (p.isOpen ? 0 : `-${heightOfMenu}`)});
   transition: transform 0.45s;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1054px) {
     display: inline;
   }
 `;
@@ -132,7 +132,7 @@ export const Container = styled.div``;
 export const BurgerMenu = styled.div``;
 export const Mobilebtn = styled.div`
   display: none;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1054px) {
     display:flex;
     justify-content:space-between;
     float:right;
