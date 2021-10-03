@@ -360,7 +360,7 @@ const Navigbar = ({ login }) => {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink onClick={showSignup} isSignupOpen={isSignupOpen}>
+              <NavLink >
                 <a
                   style={{ textDecoration: "none", color: "gray" }}
                   target="_blank"
