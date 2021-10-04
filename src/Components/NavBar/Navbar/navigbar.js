@@ -14,6 +14,7 @@ import {
   BurgerIcon,
   BurgerMenu,
   Mobilebtn,
+  Navlinkout,
 } from "./navbarelements";
 import "./navbar.css";
 import { GoogleLogout } from "react-google-login";
@@ -250,8 +251,9 @@ const Navigbar = ({ login }) => {
                 </Links>
               </NavLink>
             </NavItem>
-
+                  
             <NavItem id="navbarlink">
+            <Navlinkout>
               <FaGithubAlt
                 style={{ color: "white", marginRight: "5px", fontSize: "20px" }}
               />
@@ -267,6 +269,7 @@ const Navigbar = ({ login }) => {
                 {" "}
                 GitHub
               </a>
+              </Navlinkout>
             </NavItem>
             <NavItem id="navbarlink"style={{ color: "white", fontSize: "20px" }} >
               <AiFillLinkedin  />

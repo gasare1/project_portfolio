@@ -7,7 +7,24 @@ const heightOfMenu = "500px";
 
 export const NavItem = styled.ul`
   color: #fff;
+  &:hover {
+    color: white;
+  }
+`;
+export const Navlinkout = styled.li`
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Mukta", sans-serif;
+  font-size: 20px;
 
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  &:hover {
+    color: white;
+  }
 `;
 export const NavLink = styled(Links)`
   color: #fff;
@@ -15,12 +32,12 @@ export const NavLink = styled(Links)`
   text-decoration: none;
   font-family: "Mukta", sans-serif;
   font-size: 20px;
-  
-  justify-content:center;
-  align-items:center;
-  display:flex;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
   &:hover {
-    color: gray;
+    color: white;
   }
 
   @media screen and (max-width: 1054px) {
@@ -28,7 +45,6 @@ export const NavLink = styled(Links)`
   }
 `;
 export const Navbar = styled.nav`
-  
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
@@ -45,23 +61,22 @@ export const Nav = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  float:right;
-  margin-top:20px;
-  margin-right:30px;
+  float: right;
+  margin-top: 20px;
+  margin-right: 30px;
 `;
 export const NavbarBrand = styled.div`
   font-family: "Gemunu Libre", sans-serif;
   color: white;
-  margin-left:10px;
+  margin-left: 10px;
   font-size: 50px;
   margin-bottom: 20px;
   cursor: pointer;
-  justify-content:space-between;
-  float:left;
+  justify-content: space-between;
+  float: left;
   @media (max-width: 1080px) {
     font-size: 30px;
     flex-direction: row;
-    
   }
 `;
 export const Collapse = styled.div``;
@@ -108,7 +123,7 @@ export const Menu = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  background:#0000ffff;
+  background: #0000ffff;
 `;
 export const MenuButton = styled(Link)`
   cursor: pointer;
@@ -133,8 +148,8 @@ export const BurgerMenu = styled.div``;
 export const Mobilebtn = styled.div`
   display: none;
   @media screen and (max-width: 1054px) {
-    display:flex;
-    justify-content:space-between;
-    float:right;
+    display: flex;
+    justify-content: space-between;
+    float: right;
   }
 `;

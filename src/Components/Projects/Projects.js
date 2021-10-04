@@ -22,7 +22,7 @@ function Projects() {
     AOS.init();
   return (
       <div  id="projects" style={{
-       backgroundImage:`url(${background})`,backgroundSize:' 100% 100%',width:'100vw',height:'auto',backgroundRepeat:'no-repeat'
+       backgroundImage:`url(${background})`,backgroundSize:' 100% 100%',width:'100vw',height:'100%',backgroundRepeat:'no-repeat',maxHeight:'auto'
       }}>
     <ProjHome className='project'
       style={{

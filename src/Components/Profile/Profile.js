@@ -5,6 +5,11 @@ import { FaReact, FaHtml5, FaCss3, FaGithubAlt } from "react-icons/fa";
 import GoogleLogin from "react-google-login";
 import useFetch from "react-fetch-hook"
 import { Form, Modal } from "react-bootstrap";
+import { Progress } from "shards-react";
+import { Alert } from "shards-react";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "shards-ui/dist/css/shards.min.css"
 import {
 
   HomeBg,
@@ -130,6 +135,13 @@ const Profile = () => {
             
             Welcome to your profile page.
           </HomeP>
+          <span style={{color:'white'}}
+            
+          >
+             <Progress value="40">40%</Progress>;
+            
+            Page under Construction Contact admin for further updates
+          </span>
         </HomeContent>
       </HomeContainer>
     </>
