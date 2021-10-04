@@ -192,7 +192,7 @@ const Navigbar = ({ login }) => {
           </NavbarBrand>
           <Mobilebtn>
             <CgMenuLeft
-              style={{ fontSize: "40px", color: "white" }}
+              style={{ fontSize: "40px", color: "black" }}
               onClick={showMobileModal}
               ismobileMenu={ismobileMenu}
             />
