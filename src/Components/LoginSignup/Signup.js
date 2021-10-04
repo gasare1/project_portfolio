@@ -75,16 +75,7 @@ const Register = () => {
               required
               onChange={(e) => setPassword(e.target.value)}
             />
-          
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              type="password"
-              placeholder="Password"
-              required
-              onChange={(e) => setPassword(e.target.value)}
-            />
-    
-          
+
             <Form.Label>First Name</Form.Label>
             <Form.Control
               type="name"
