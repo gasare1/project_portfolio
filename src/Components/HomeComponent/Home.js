@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import video from "../../Images/homeback.mp4";
+import video from "../../Images/mainback.mp4";
 import { BsBootstrap } from "react-icons/bs";
 import { FaReact, FaHtml5, FaCss3, FaGithubAlt,FaPython } from "react-icons/fa";
 import { Form, Modal } from "react-bootstrap";
