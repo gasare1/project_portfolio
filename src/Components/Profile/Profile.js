@@ -135,7 +135,7 @@ const Profile = () => {
           <span style={{color:'white'}}
             
           >
-             <ProgressBar now={now} label={`${now}% complete`} />
+             <ProgressBar animated now={now} now={now} label={`${now}% complete`} />
             
             Page is under Construction Contact the admin for further updates
           </span>
