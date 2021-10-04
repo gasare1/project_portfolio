@@ -7,7 +7,7 @@ import useFetch from "react-fetch-hook"
 import { Form, Modal } from "react-bootstrap";
 import { Progress } from "shards-react";
 import { Alert } from "shards-react";
-
+import {ProgressBar}from 'react-bootstrap'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
 import {
@@ -98,7 +98,7 @@ const Profile = () => {
     
   };
 
-
+  const now = 20;
  
   
   if (name === {name}){
@@ -138,9 +138,9 @@ const Profile = () => {
           <span style={{color:'white'}}
             
           >
-             <Progress value="40">40%</Progress>;
+             <ProgressBar now={now} label={`${now}% complete`} />
             
-            Page under Construction Contact admin for further updates
+            Page is under Construction Contact the admin for further updates
           </span>
         </HomeContent>
       </HomeContainer>
