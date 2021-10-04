@@ -5,8 +5,6 @@ import { FaReact, FaHtml5, FaCss3, FaGithubAlt } from "react-icons/fa";
 import GoogleLogin from "react-google-login";
 import useFetch from "react-fetch-hook"
 import { Form, Modal } from "react-bootstrap";
-import { Progress } from "shards-react";
-import { Alert } from "shards-react";
 import {ProgressBar}from 'react-bootstrap'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
