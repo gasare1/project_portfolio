@@ -1,5 +1,6 @@
 import React, { Component, useState } from "react";
-import { Form, Button, Modal, Row, Col } from "react-bootstrap";
+import { Form,Modal, Row, Col } from "react-bootstrap";
+import { Button } from "@material-ui/core";
 import { Link, Redirect } from "react-router-dom";
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -66,8 +67,15 @@ const Register = () => {
               required
               onChange={(e) => setEmail(e.target.value)}
             />
-          </Form.Group>
-          <Form.Group as={Col} controlId="formGridPassword">
+        
+          <Form.Label>Password</Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              required
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          
             <Form.Label>Password</Form.Label>
             <Form.Control
               type="password"
@@ -75,8 +83,8 @@ const Register = () => {
               required
               onChange={(e) => setPassword(e.target.value)}
             />
-          </Form.Group>
-          <Form.Group as={Col} controlId="formGridPassword">
+    
+          
             <Form.Label>First Name</Form.Label>
             <Form.Control
               type="name"
@@ -84,8 +92,8 @@ const Register = () => {
               required
               onChange={(e) => setFirstname(e.target.value)}
             />
-          </Form.Group>
-          <Form.Group as={Col} controlId="formGridPassword">
+         
+       
             <Form.Label>Last Name</Form.Label>
             <Form.Control
               type="name"
@@ -97,7 +105,7 @@ const Register = () => {
         </Row>
       </Form>
       <Modal.Footer>
-        <Button variant="primary" type="submit" onClick={submit}>
+      <Button variant="outlined" color="primary" type="submit" onClick={submit}>
           Submit
         </Button>
       </Modal.Footer>
