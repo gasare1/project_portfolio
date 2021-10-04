@@ -182,12 +182,12 @@ const Navigbar = ({ login }) => {
       <Navbar
         style={{
           transition: "1s ease",
-          backgroundColor: navBackground ? "black" : "transparent",
+          backgroundColor: navBackground ? "white" : "transparent",
           height: "90px",
         }}
       >
         <Collapse isOpen={isOpen} navbar>
-          <NavbarBrand style={{ fontFamily: "Comfortaa, cursive" }}>
+          <NavbarBrand style={{ fontFamily: "Comfortaa, cursive",color:'black' }}>
             Glen Asare
           </NavbarBrand>
           <Mobilebtn>
@@ -201,17 +201,17 @@ const Navigbar = ({ login }) => {
             <NavItem>
               <NavLink to="/">
                 {" "}
-                <GiHouse style={{ color: "white", marginRight: "5px" }} />{" "}
+                <GiHouse style={{ color: "black", marginRight: "5px" }} />{" "}
                 {name ? (
                   <Link
-                    style={{ color: "gray", textDecoration: "none" }}
+                    style={{ color: "black", textDecoration: "none" }}
                     to="/"
                   >
                     Home
                   </Link>
                 ) : (
                   <Links
-                    style={{ color: "gray", textDecoration: "none" }}
+                    style={{ color: "black", textDecoration: "none" }}
                     to="/"
                   >
                     Home
@@ -223,10 +223,10 @@ const Navigbar = ({ login }) => {
               <NavLink onClick={showContactModal} isContactOpen={isContactOpen}>
                 {" "}
                 <RiFindReplaceLine
-                  style={{ color: "white", marginRight: "5px" }}
+                  style={{ color: "black", marginRight: "5px" }}
                 />
                 <Links
-                  style={{ color: "gray", textDecoration: "none" }}
+                  style={{ color: "black", textDecoration: "none" }}
                   to="projects"
                 >
                   Projects
@@ -238,11 +238,11 @@ const Navigbar = ({ login }) => {
                 {" "}
                 <Links style={{ textDecoration: "none" }} to="about">
                   <BsFillQuestionCircleFill
-                    style={{ color: "white", marginRight: "5px" }}
+                    style={{ color: "black", marginRight: "5px" }}
                   />
 
                   <a
-                    style={{ textDecoration: "none", color: "gray" }}
+                    style={{ textDecoration: "none", color: "black" }}
                     target="_blank"
                   >
                     {" "}
@@ -255,12 +255,12 @@ const Navigbar = ({ login }) => {
             <NavItem id="navbarlink">
             <Navlinkout>
               <FaGithubAlt
-                style={{ color: "white", marginRight: "5px", fontSize: "20px" }}
+                style={{ color: "black", marginRight: "5px", fontSize: "20px" }}
               />
               <a
                 style={{
                   textDecoration: "none",
-                  color: "gray",
+                  color: "black",
                   fontSize: "20px",
                 }}
                 href="https://github.com/gasare1"
@@ -271,12 +271,12 @@ const Navigbar = ({ login }) => {
               </a>
               </Navlinkout>
             </NavItem>
-            <NavItem id="navbarlink"style={{ color: "white", fontSize: "20px" }} >
+            <NavItem id="navbarlink"style={{ color: "black", fontSize: "20px" }} >
               <AiFillLinkedin  />
               <a
                 style={{
                   textDecoration: "none",
-                  color: "gray",
+                  color: "black",
                   cursor: "pointer",
                   fontSize: "20px",
                 }}
@@ -293,9 +293,9 @@ const Navigbar = ({ login }) => {
                   <span> </span>
                 ) : (
                   <span>
-                    <BiLogInCircle style={{ color: "white" }} />
+                    <BiLogInCircle style={{ color: "black" }} />
                     <a
-                      style={{ textDecoration: "none", color: "gray" }}
+                      style={{ textDecoration: "none", color: "black" }}
                       target="_blank"
                     >
                       {" "}
@@ -365,7 +365,7 @@ const Navigbar = ({ login }) => {
             <NavItem>
               <NavLink >
                 <a
-                  style={{ textDecoration: "none", color: "gray" }}
+                  style={{ textDecoration: "none", color: "black" }}
                   target="_blank"
                 >
                   {" "}

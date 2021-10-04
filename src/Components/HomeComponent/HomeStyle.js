@@ -45,7 +45,7 @@ export const HomeContent = styled.div`
   }
 `;
 export const HomeH1 = styled.h1`
-  color: #fff;
+  color: #000;
   font-size: 48px;
   text-align: center;
   justify-content: center;
@@ -62,7 +62,7 @@ export const HomeH1 = styled.h1`
   }
 `;
 export const HomeP = styled.p`
-  color: #fff;
+  color: #000;
   font-size: 1rem;
   font-family: monospace;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
