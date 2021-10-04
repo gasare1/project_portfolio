@@ -32,10 +32,12 @@ export default class Footers extends Component {
         }}
         className="text-center text-lg-left"
       >
-        <MDBContainer className="p-5 pb-0 " style={{marginTop:'30px',justifyConent: "center",
+        <MDBContainer className="p-3 pb-5 " style={{marginTop:'30px',justifyConent: "center",
           alignItems: "center",
           disply: "flex",}} >
-          <form style={{marginLeft:'10rem'}} action="">
+          <form  style={{marginTop:'30px',justifyConent: "center",
+          alignItems: "center",
+          disply: "flex",}}  action="">
             <MDBRow>
               <MDBCol size="auto" className="mb-4 mb-md-0">
                 <p className="pt-2">

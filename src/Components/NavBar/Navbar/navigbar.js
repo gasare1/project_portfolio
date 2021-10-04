@@ -65,8 +65,8 @@ const Navigbar = ({ login }) => {
   const [Logout, setLogout] = useState("Logout");
   const toggle = () => setIsOpen(!isOpen);
 
-  const [isLoginOpen, setIsLoginOpen] = React.useState(false);
-  const [isSignupOpen, setIsSignupOpen] = React.useState(false);
+  const [isloginopen, setIsLoginOpen] = React.useState(false);
+  const [issignupopen, setIsSignupOpen] = React.useState(false);
   const [isQOpen, setQOpen] = React.useState(false);
   const [ismobileMenu, setmobileMenu] = React.useState(false);
 
@@ -288,7 +288,7 @@ const Navigbar = ({ login }) => {
               </a>
             </NavItem>
             <NavItem>
-              <NavLink onClick={showSignup} isSignupOpen={isSignupOpen}>
+              <NavLink onClick={showSignup} isSignupOpen={issignupopen}>
                 {name ? (
                   <span> </span>
                 ) : (
@@ -320,7 +320,7 @@ const Navigbar = ({ login }) => {
                 >
                   <NavDropdown.Item
                     onClick={showModal}
-                    isLoginOpen={isLoginOpen}
+                    isLoginOpen={isloginopen}
                   >
                     {name ? <span> </span> : <span>Login</span>}
                   </NavDropdown.Item>
@@ -532,7 +532,7 @@ const Navigbar = ({ login }) => {
                             <span
                               style={{ color: "black", textDecoration: "none" }}
                               onClick={showModal}
-                              isLoginOpen={isLoginOpen}
+                              isLoginOpen={isloginopen}
                             >
                               Login
                             </span>
@@ -564,7 +564,7 @@ const Navigbar = ({ login }) => {
                     <NavLink
                       style={{ display: "flex" }}
                       onClick={showSignup}
-                      isSignupOpen={isSignupOpen}
+                      isSignupOpen={issignupopen}
                     >
                       {name ? (
                         <span> </span>
@@ -583,7 +583,7 @@ const Navigbar = ({ login }) => {
                     </NavLink>
                   </NavItem>
                   <NavItem style={{ display: "flex" }}>
-                    <NavLink onClick={showSignup} isSignupOpen={isSignupOpen}>
+                    <NavLink >
                       <a
                         style={{ textDecoration: "none", color: "black" }}
                         target="_blank"
@@ -606,7 +606,7 @@ const Navigbar = ({ login }) => {
                 </Form>
               </Modal.Body>
             </Modal>
-            <Modal show={isLoginOpen} onHide={hideModal}>
+            <Modal show={isloginopen} onHide={hideModal}>
               <Modal.Header>
                 <Modal.Title>
                   <div className="container">
@@ -627,7 +627,7 @@ const Navigbar = ({ login }) => {
               </Modal.Body>
             </Modal>
 
-            <Modal show={isSignupOpen} onHide={hideContactModal}>
+            <Modal show={issignupopen} onHide={hideContactModal}>
               <Modal.Header>
                 <Modal.Title>
                   <div className="container">

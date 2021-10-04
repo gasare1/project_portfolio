@@ -20,7 +20,7 @@ export default function Singin() {
     setLoading(true);
     setState(true);
     e.preventDefault();
-    await fetch("https://glenasare15.pythonanywhere.com/login", {
+    await fetch("http://127.0.0.1:5000/login", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -32,8 +32,7 @@ export default function Singin() {
         if (response.status === 200) {
           
           console.log(response.data);
-          setName(response);
-          console.log("SUCCESSS");
+          console.log("LOG IN SUCCESSFUL");
           history.push("/");
           const firstname = localStorage.getItem('firstname')
           setName(firstname)
@@ -45,11 +44,7 @@ export default function Singin() {
         }
       })
       .then((data) => {
-        console.log(data);
-        localStorage.setItem('firstname', data);
-        
-        
-        console.log("DATA STORED" + data);
+        localStorage.setItem('firstname', data[0]+ " " + data[1]);
       });
   };
 
