@@ -6,8 +6,7 @@ import GoogleLogin from "react-google-login";
 import useFetch from "react-fetch-hook"
 import { Form, Modal } from "react-bootstrap";
 import {ProgressBar}from 'react-bootstrap'
-import "bootstrap/dist/css/bootstrap.min.css";
-import "shards-ui/dist/css/shards.min.css"
+
 import {
 
   HomeBg,
