@@ -16,13 +16,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './project.scss'
-import background from '../../Images/codingback2.jpg'
+import background from '../../Images/aboutback4.jpg'
 import { ProjHome } from "./Projele";
+import './project.css'
 function Projects() {
     AOS.init();
   return (
       <div  id="projects" style={{
-       backgroundImage:`url(${background})`,backgroundSize:' 100% 100%',width:'100vw',height:'100%',backgroundRepeat:'no-repeat',maxHeight:'auto'
+       backgroundImage:`url(${background})`
       }}>
     <ProjHome className='project'
       style={{
