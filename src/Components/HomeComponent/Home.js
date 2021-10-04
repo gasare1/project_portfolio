@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import video from "../../Images/mainback1.mp4";
+import video from "../../Images/mainback3.mp4";
 import { BsBootstrap } from "react-icons/bs";
 import { FaReact, FaHtml5, FaCss3, FaGithubAlt,FaPython } from "react-icons/fa";
 import { Form, Modal } from "react-bootstrap";
@@ -130,14 +130,14 @@ const Home = () => {
               marginTop: "20px",
               zIndex: "99",
               cursor: "pointer",
-              color: "white",
+              color: "black",
               textDecoration: "none",
             }}
             className="cv"
           >
             {" "}
             <a
-              style={{ textDecoration: "none", color: "white" }}
+              style={{ textDecoration: "none", color: "black" }}
               href="https://drive.google.com/uc?export=download&id=1cgy-2CWaaw7WQtPvTSbmBhvwTqW1mXxK"
               download
             >

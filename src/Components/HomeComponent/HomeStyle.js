@@ -108,7 +108,7 @@ export const Button = styled.button`
   }
 `;
 export const HomeText = styled.div`
-  color: white;
+  color: black;
   align-items: center;
   align-content: center;
   float: right;
