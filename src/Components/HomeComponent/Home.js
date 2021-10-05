@@ -99,7 +99,7 @@ const Home = () => {
         </HomeBg>
         
         <HomeText>
-        <Weather unit="F" lat={lat} lon={lng} appid="80f4d94a8038dc5274f4113b84de39cd" style={{display:'flex',zIndex:'99',color:'black'}}/>
+        <Weather id="weather" unit="F" lat={lat} lon={lng} appid="80f4d94a8038dc5274f4113b84de39cd" style={{display:'flex',zIndex:'99',color:'black',float:'left'}}/>
           <HomeContentP
             data-aos="fade-left"
             data-aos-anchor="#example-anchor"
@@ -153,11 +153,11 @@ const Home = () => {
         </HomeText>
         <HomeContent id="homecontent">
           <HomeH1>Hello World </HomeH1>
-          <HomeP>Welcome to my web-development portfolio.</HomeP>
-          <HomeP>  <ReactWeather forecast="today" apikey="80f4d94a8038dc5274f4113b84de39cd" type="auto" /></HomeP>
+          <HomeP id="homep" >Welcome to my web-development portfolio.</HomeP>
           <Button
             variant="outlined"
             color="primary"
+            id="button"
             style={{
               marginTop: "20px",
               zIndex: "99",

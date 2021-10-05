@@ -6,8 +6,6 @@ export const Video = styled.video`
   -o-object-fit: cover;
   object-fit: cover;
   background: #232a34;
-  
-  
 `;
 export const HomeContainer = styled.div`
   background: #0c0c0c;
@@ -15,10 +13,15 @@ export const HomeContainer = styled.div`
   height: 1024px;
   position: relative;
 
-  margin-top:-6rem;
-  @media screen and (max-width: 1024) {
+  margin-top: -6rem;
+  @media screen and (max-width: 780) {
     height: 1366px;
     width: 1024px;
+    margin-top: 6rem;
+    margin-right:1rem;
+    justify-content:center;
+    align-items:center;
+    display:flex;
   }
 `;
 export const HomeBg = styled.div`
@@ -38,10 +41,10 @@ export const HomeContent = styled.div`
   justify-content: center;
   display: flex;
   align-items: center;
-  margin-left:100px;
+  margin-left: 100px;
   flex-direction: column;
-  @media screen and (max-width: 1024) {
-   margin:1000px;
+  @media screen and (max-width: 780) {
+    
   }
 `;
 export const HomeH1 = styled.h1`
@@ -51,14 +54,15 @@ export const HomeH1 = styled.h1`
   justify-content: center;
   display: flex;
   align-items: center;
-  display: flex;
   margin-top: 20rem;
   font-family: "Encode Sans SC", sans-serif;
-  z-index:99;
-  margin-top:600px;
-  @media screen and (max-width: 700) {
-   margin-top:-100px;
-   
+  z-index: 99;
+  margin-top: 600px;
+  @media screen and (max-width: 780) {
+    margin:20px;
+    justify-content: left;
+    display: flex;
+    align-items: left;
   }
 `;
 export const HomeP = styled.p`
@@ -73,9 +77,14 @@ export const HomeP = styled.p`
   animation: typing 3.5s steps(60, end), blink-caret 0.65s step-end 8;
   white-space: nowrap;
   border-right: 0.15em solid transparent;
-  z-index:99;
-  
-
+  z-index: 99;
+  @media screen and (max-width: 780) {
+    margin-left:-12rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    display:none;
+  }
   /* The typing effect */
   @keyframes typing {
     from {
@@ -96,15 +105,13 @@ export const HomeP = styled.p`
     }
   }
   @media screen and (max-width: 700) {
-   margin-top:-100px;
    
   }
 `;
 export const Button = styled.button`
   margin-top: 20px;
   @media screen and (max-width: 150) {
-   margin-left:-100px;
-   
+    margin-left: -100px;
   }
 `;
 export const HomeText = styled.div`
@@ -113,22 +120,16 @@ export const HomeText = styled.div`
   align-content: center;
   float: right;
   margin-top: 20rem;
-  z-index:99;
+  z-index: 99;
   @media screen and (max-width: 1024px) {
-    margin-top: 40rem;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-
+    float: left;
   }
 `;
 export const HomeContentP = styled.p`
   font-size: 20px;
-  z-index:99;
+  z-index: 99;
   font-family: "Indie Flower", cursive;
   @media screen and (max-width: 1054px) {
-    margin-top: 10px;
-    margin-top: -5rem;
+   margin:auto;
   }
 `;

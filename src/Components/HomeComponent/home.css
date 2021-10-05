@@ -1,6 +1,17 @@
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 780px) {
     #homecontent{
-        margin: 0px;
+        
+        margin-right: -200px;
+    }
+    #homep{
+        display: none;
+    }
+    #weather{
+        margin-bottom: 0px;
+        height: 20px;
+    }
+    #button{
+        margin-bottom: 10px;
     }
   }
