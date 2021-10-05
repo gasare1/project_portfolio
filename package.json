@@ -28,6 +28,8 @@
     "react-fetch-hook": "^1.8.5",
     "react-google-login": "^5.2.2",
     "react-icons": "^4.2.0",
+    "react-open-weather": "^1.1.6",
+    "react-open-weather-widget": "^1.1.0",
     "react-router": "^5.2.1",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
@@ -35,8 +37,10 @@
     "react-strap": "^0.0.1",
     "reactstrap": "^8.10.0",
     "sass": "^1.42.1",
+    "simple-react-weather": "^1.0.2",
     "styled-components": "^5.3.1",
     "use-between": "^0.0.18",
+    "use-position": "^0.0.8",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

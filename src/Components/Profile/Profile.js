@@ -6,7 +6,7 @@ import GoogleLogin from "react-google-login";
 import useFetch from "react-fetch-hook"
 import { Form, Modal } from "react-bootstrap";
 import {ProgressBar}from 'react-bootstrap'
-
+import WeatherApp from "../HomeComponent/Weather";
 import {
 
   HomeBg,
@@ -30,6 +30,7 @@ import Navigbar from "../NavBar/Navbar/navigbar";
 import Profilenav from "./Profilenav";
 import Userprofile from "./Userprofile";
 import { useHistory, Route } from "react-router-dom";
+import ReactWeather from 'react-open-weather'
 import axios from "axios";
 const Profile = () => {
   useEffect(() => {
@@ -108,7 +109,8 @@ const Profile = () => {
       <HomeContainer id="profile" style={{backgroundImage:`url(${image1}) `,backgroundSize:' 100% 100%',width:'100vw',backgroundRepeat:'no-repeat'}}>
       
         <HomeBg>
-         
+        <ReactWeather forecast="today" apikey="80f4d94a8038dc5274f4113b84de39cd" type="auto" />
+         <WeatherApp/>
         </HomeBg>
         <HomeContent>
           
