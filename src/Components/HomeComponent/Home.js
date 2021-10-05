@@ -99,7 +99,7 @@ const Home = () => {
         </HomeBg>
         
         <HomeText>
-        <Weather id="weather" unit="F" lat={lat} lon={lng} appid="80f4d94a8038dc5274f4113b84de39cd" style={{display:'flex',zIndex:'99',color:'black',float:'left'}}/>
+        <Weather id="weather" unit="F" lat={lat} lon={lng} appid="80f4d94a8038dc5274f4113b84de39cd" style={{display:'flex',zIndex:'99',color:'black',float:'left',backgroundColor:'gray'}}/>
           <HomeContentP
             data-aos="fade-left"
             data-aos-anchor="#example-anchor"
