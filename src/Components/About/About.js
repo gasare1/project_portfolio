@@ -40,13 +40,13 @@ function About() {
       </p>
       <p data-aos="fade-up"
      data-aos-duration="3000">
-        I will consider myself as a fullstack developer as I can manage to mutitask
+        I will consider myself as a fullstack developer as I can manage to multi-task
         anything pertaining to front and backend
       </p>
       <p data-aos="fade-up"
      data-aos-duration="3000">
         This Website was built using ReactJs with a lot of libraries and Python
-        flask server and PostgresSQL database
+        flask server, PostgresSQL database, Google API and Open Weather API.
       </p>
       <p data-aos="fade-up"
      data-aos-duration="3000">
