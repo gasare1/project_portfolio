@@ -19,7 +19,7 @@ import {
   HomeText,
   HomeContentP,
 } from "../HomeComponent/HomeStyle";
-import image1  from "../../Images/profback.jpg";
+import image1  from "../../Images/pexels-jess-bailey-designs-1097930.jpg";
 import { animateScroll as scroll } from "react-scroll";
 import { Button } from "@material-ui/core";
 import AOS from "aos";
@@ -109,8 +109,7 @@ const Profile = () => {
       <HomeContainer id="profile" style={{backgroundImage:`url(${image1}) `,backgroundSize:' 100% 100%',width:'100vw',backgroundRepeat:'no-repeat'}}>
       
         <HomeBg>
-        <ReactWeather forecast="today" apikey="80f4d94a8038dc5274f4113b84de39cd" type="auto" />
-         <WeatherApp/>
+        
         </HomeBg>
         <HomeContent>
           
@@ -134,7 +133,7 @@ const Profile = () => {
             
             Welcome to your profile page.
           </HomeP>
-          <span style={{color:'white'}}
+          <span style={{color:'black'}}
             
           >
              <ProgressBar animated now={now} now={now} label={`${now}% complete`} />
