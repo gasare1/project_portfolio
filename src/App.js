@@ -13,8 +13,13 @@ import React from "react";
 import GoogleLogin from "react-google-login";
 import About from "./Components/About/About";
 import Footers from "./Components/Footer/Footer";
-
+import {useSelector} from 'react-redux'
+import { Redirect } from "react-router";
+import { useEffect } from "react";
 function App() {
+ 
+
+
   return (
     <div className="d-flex flex-column h-100">
       <Router>
@@ -32,8 +37,8 @@ function App() {
         </Route> <Route path="/" component={Footers} exact>
           <Footers />
         </Route>
-
-        <Route path="/profile" component={() => <Profile />} exact />
+        { localStorage.getItem('firstname') ? <Route path="/profile" component={() => <Profile />} exact /> : <Redirect to='/'/>}
+        { localStorage.getItem('name') ? <Route path="/profile" component={() => <Profile />} exact /> : <Redirect to='/'/>}
       </Router>
     </div>
   );

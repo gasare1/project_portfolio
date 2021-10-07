@@ -3,8 +3,10 @@ import axios from "axios";
 import { Form, Button, Modal, Row, Col } from "react-bootstrap";
 import { Link, Redirect, useHistory, Route } from "react-router-dom";
 import GoogleLogin from "react-google-login";
+import {useSelector} from 'react-redux'
 import Profile from "../Profile/Profile";
 import App from "../../App";
+
 export default function Singin() {
   const [password, setPassword] = useState("");
   const [email, setUsername] = useState("");
@@ -16,6 +18,7 @@ export default function Singin() {
   const [name2, setName2] = React.useState("");
   const [loading, setLoading] = useState(false);
   const [state, setState] = useState(false);
+
   const login = async (e) => {
     setLoading(true);
     setState(true);
@@ -35,7 +38,7 @@ export default function Singin() {
           history.push("/");
           const firstname = localStorage.getItem("firstname");
           setName(firstname);
-
+          
           return response.json();
         } else if (response.status === 408) {
           console.log("SOMETHING WENT WRONG");
@@ -50,8 +53,8 @@ export default function Singin() {
 
   const responseGoogle = (response) => {
     console.log(response);
-    console.log(response.profileObj);
-    setName(response.profileObj.name);
+    localStorage.setItem("name", response.profileObj.name);
+    window.location.reload();
     history.push("/");
     window.location.reload();
   };

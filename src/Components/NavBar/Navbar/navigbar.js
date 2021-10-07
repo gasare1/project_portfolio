@@ -201,7 +201,7 @@ const Navigbar = ({ login }) => {
             <NavItem>
               <NavLink to="/">
                 {" "}
-                <GiHouse style={{ color: "black", marginRight: "5px" }} />{" "}
+                <GiHouse style={{ color: "black", marginRight: "5px",cursor:'pointer' }} />{" "}
                 {name ? (
                   <Link
                     style={{ color: "black", textDecoration: "none" }}
