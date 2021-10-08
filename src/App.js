@@ -13,13 +13,11 @@ import React from "react";
 import GoogleLogin from "react-google-login";
 import About from "./Components/About/About";
 import Footers from "./Components/Footer/Footer";
-import {useSelector} from 'react-redux'
+import { useSelector } from "react-redux";
 import { Redirect } from "react-router";
 import { useEffect } from "react";
+import Unauthorizedpage from "./Components/Store/Unauthorized";
 function App() {
- 
-
-
   return (
     <div className="d-flex flex-column h-100">
       <Router>
@@ -34,11 +32,23 @@ function App() {
         </Route>
         <Route path="/" component={About} exact>
           <About />
-        </Route> <Route path="/" component={Footers} exact>
+        </Route>{" "}
+        <Route path="/" component={Unauthorizedpage} exact>
+          <About />
+        </Route>{" "}
+        <Route path="/" component={Footers} exact>
           <Footers />
         </Route>
-        { localStorage.getItem('firstname') ? <Route path="/profile" component={() => <Profile />} exact /> : <Redirect to='/'/>}
-        { localStorage.getItem('name') ? <Route path="/profile" component={() => <Profile />} exact /> : <Redirect to='/'/>}
+        {localStorage.getItem("firstname") ? (
+          <Route path="/profile" component={() => <Profile />} exact />
+        ) : (
+          <Route path="/profile" component={() => <Unauthorizedpage  />} exact />
+        )}
+        {localStorage.getItem("name") ? (
+          <Route path="/profile" component={() => <Profile />} exact />
+        ) : (
+          <Route path="/unauthorized" component={() => <Unauthorizedpage />} exact />
+        )}
       </Router>
     </div>
   );

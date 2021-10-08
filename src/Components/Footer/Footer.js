@@ -3,6 +3,7 @@ import Footer from "rc-footer";
 import "rc-footer/assets/index.css";
 import { AiFillGithub } from "react-icons/ai";
 import { SiPostgresql } from "react-icons/si";
+import { Button } from "react-bootstrap";
 import {
   FaReact,
   FaHtml5,
@@ -32,32 +33,9 @@ export default class Footers extends Component {
         }}
         className="text-center text-lg-left"
       >
-        <MDBContainer className="p-3 pb-5 " style={{marginTop:'30px',justifyConent: "center",
-          alignItems: "center",
+        <MDBContainer className="p-2 pb-5 " style={{marginTop:'30px',justifyConent: "center",
           disply: "flex",}} >
-          <form  style={{marginTop:'30px',justifyConent: "center",
-          alignItems: "center",
-          disply: "flex",}}  action="">
-            <MDBRow>
-              <MDBCol size="auto" className="mb-4 mb-md-0">
-                <p className="pt-2">
-                  <strong>Sign up for updates</strong>
-                </p>
-              </MDBCol>
-
-              <MDBCol md="5" size="12" className="mb-4 mb-md-0">
-                <MDBInput
-                  type="text"
-                  id="form5Example2"
-                  placeholder="Email address"
-                />
-              </MDBCol>
-
-              <MDBCol size="auto" className="mb-4 mb-md-0">
-                <MDBBtn>Subscribe</MDBBtn>
-              </MDBCol>
-            </MDBRow>
-          </form>
+    
           <form style={{marginLeft:'20rem'}} action="">
             <MDBRow>
               <MDBCol md="2" mt="2" size="12" className="mb-4 mb-md-0">
@@ -84,10 +62,32 @@ export default class Footers extends Component {
               </MDBCol>
             </MDBRow>
           </form>
-          <ButtonMailto style={{textDecoration:'none',color:'white'}} label="Contact Me" mailto="mailto:glenasare10@gmail.com" ></ButtonMailto>
+          <form   className="text-center p-4 "  action=""> 
+            <MDBRow>
+              <MDBCol size="3" className="mb-4 mb-md-4">
+                <p className="pt-2">
+                  <strong>Sign up for updates</strong>
+                </p>
+              </MDBCol>
+
+              <MDBCol md="5" size="12" className="mb-4 mb-md-0">
+                <MDBInput
+                  type="text"
+                  id="form5Example2"
+                  placeholder="Email address"
+                />
+              </MDBCol>
+
+              <MDBCol size="2" className="mb-4 mb-md-0">
+                <Button href="/">Subscribe</Button>
+              </MDBCol>
+            </MDBRow>
+          </form>
+          <Button style={{textDecoration:'none',color:'white'}} label="Contact Me" href="mailto:glenasare10@gmail.com">Contact Me</Button>
           <div style={{ flexDirection: "row" }}></div>
+       
         </MDBContainer>
-        
+      
         <div
           className="text-center p-3"
           style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
