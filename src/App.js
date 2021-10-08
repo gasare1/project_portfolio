@@ -33,9 +33,6 @@ function App() {
         <Route path="/" component={About} exact>
           <About />
         </Route>{" "}
-        <Route path="/" component={Unauthorizedpage} exact>
-          <About />
-        </Route>{" "}
         <Route path="/" component={Footers} exact>
           <Footers />
         </Route>

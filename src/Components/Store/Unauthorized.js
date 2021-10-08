@@ -34,6 +34,7 @@ class Unauthorizedpage extends Component {
           HTTP/1.1 401 Unauthorized page please login to gain access Date:{" "}
           {this.state.currentDate}
           WWW-Authenticate: Basic realm="Access to staging site"
+          <Redirect to='/unauthorized'/>
           <Redirect to='/'/>
         </p>
       </div>
