@@ -41,11 +41,6 @@ function App() {
         ) : (
           <Route path="/profile" component={() => <Unauthorizedpage  />} exact />
         )}
-        {localStorage.getItem("name") ? (
-          <Route path="/profile" component={() => <Profile />} exact />
-        ) : (
-          <Route path="/unauthorized" component={() => <Unauthorizedpage />} exact />
-        )}
       </Router>
     </div>
   );

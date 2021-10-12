@@ -53,7 +53,7 @@ export default function Singin() {
 
   const responseGoogle = (response) => {
     console.log(response);
-    localStorage.setItem("name", response.profileObj.name);
+    localStorage.setItem("firstname", response.profileObj.name);
     window.location.reload();
     history.push("/");
     window.location.reload();
