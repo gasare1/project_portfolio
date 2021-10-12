@@ -97,11 +97,7 @@ const Profile = () => {
   };
 
   const now = 20;
- 
-  
-  if (name === {name}){
-    return <Redirect to="/"/>
-  }
+
   
 
   return (
