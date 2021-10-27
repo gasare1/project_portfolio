@@ -71,7 +71,7 @@ function Projects() {
         <Card.Img variant="top" src={image3} />
         <Card.Body>
           <Card.Title style={{fontWeight:'bolder'}}>International Baptist Ministries</Card.Title>
-          <Card.Text>This is a Churhc Website it was built using Reactjs</Card.Text>
+          <Card.Text>This is a Church Website it was built using Reactjs</Card.Text>
           <Button variant="primary" href="https://ibmchurch.com/#/">Access Page</Button>
           
         </Card.Body>
