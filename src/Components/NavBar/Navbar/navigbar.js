@@ -172,13 +172,7 @@ const Navigbar = ({ login }) => {
   };
   return (
     <div style={{ zIndex: "" }}>
-      <GoogleLogin
-        clientId="829794049909-usu1p5b3qcvaplttm46h52b2bq9pm16f.apps.googleusercontent.com"
-        onSuccess={responseGoogle}
-        onFailure={responseGoogle}
-        cookiePolicy={"single_host_origin"}
-        isSignedIn={true}
-      />
+      
       <Navbar
         style={{
           transition: "1s ease",
