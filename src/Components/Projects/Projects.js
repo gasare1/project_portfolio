@@ -4,6 +4,7 @@ import { Card, Button } from "react-bootstrap";
 import image from "../../Images/callmrmoe.PNG";
 import image2 from "../../Images/blissrec.PNG";
 import image3 from '../../Images/IBM.PNG'
+import image4 from '../../Images/adminPicture.PNG'
 import {
   Form,
   Modal,
@@ -50,11 +51,11 @@ function Projects() {
         
       </Card>
       <Card style={{ width: "18rem", margin: "50px" }} className="shadow-lg p-3 mb-5 bg-white rounded"  className="card2">
-        <Card.Img variant="top" src={image} />
+        <Card.Img variant="top" src={image4} />
         <Card.Body>
-          <Card.Title style={{fontWeight:'bolder'}}>Call Mr Moe</Card.Title>
-          <Card.Text>This is a Real Estate Website that was build with ReactJs Framework and Python Backend</Card.Text>
-          <Button variant="primary">Access Page</Button>
+          <Card.Title style={{fontWeight:'bolder'}}>Admin Console</Card.Title>
+          <Card.Text>This is a Admin that was build with ReactJs Framework and Random User API</Card.Text>
+          <Button variant="primary" href="adminconsole.netlify.app">Access Page</Button>
           
         </Card.Body>
       </Card>
