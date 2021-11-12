@@ -54,7 +54,7 @@ function Projects() {
         <Card.Img variant="top" src={image4} />
         <Card.Body>
           <Card.Title style={{fontWeight:'bolder'}}>Admin Console</Card.Title>
-          <Card.Text>This is a Admin that was build with ReactJs Framework and Random User API</Card.Text>
+          <Card.Text>This is a Admin that was build with ReactJs Framework and Random User API.. *NOT Mobile Responsive yet work is still in progress</Card.Text>
           <Button variant="primary" href="https://adminconsole.netlify.app">Access Page</Button>
           
         </Card.Body>
