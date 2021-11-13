@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
-export const Video = styled.video`
+export const Video = styled.div`
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  background: -webkit-linear-gradient(to bottom, #232526, #414345); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #232526, #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background: #232a34;
 `;
 export const HomeContainer = styled.div`
@@ -18,10 +22,10 @@ export const HomeContainer = styled.div`
     height: 1366px;
     width: 1024px;
     margin-top: 6rem;
-    margin-right:1rem;
-    justify-content:center;
-    align-items:center;
-    display:flex;
+    margin-right: 1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
 `;
 export const HomeBg = styled.div`
@@ -44,11 +48,10 @@ export const HomeContent = styled.div`
   margin-left: 100px;
   flex-direction: column;
   @media screen and (max-width: 780) {
-    
   }
 `;
 export const HomeH1 = styled.h1`
-  color: #000;
+  color: #fff;
   font-size: 48px;
   text-align: center;
   justify-content: center;
@@ -59,14 +62,14 @@ export const HomeH1 = styled.h1`
   z-index: 99;
   margin-top: 600px;
   @media screen and (max-width: 780) {
-    margin:20px;
+    margin: 20px;
     justify-content: left;
     display: flex;
     align-items: left;
   }
 `;
 export const HomeP = styled.p`
-  color: #000;
+  color: #fff;
   font-size: 1rem;
   font-family: monospace;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -79,11 +82,11 @@ export const HomeP = styled.p`
   border-right: 0.15em solid transparent;
   z-index: 99;
   @media screen and (max-width: 780) {
-    margin-left:-12rem;
+    margin-left: -12rem;
     justify-content: center;
     display: flex;
     align-items: center;
-    display:none;
+    display: none;
   }
   /* The typing effect */
   @keyframes typing {
@@ -105,7 +108,6 @@ export const HomeP = styled.p`
     }
   }
   @media screen and (max-width: 700) {
-   
   }
 `;
 export const Button = styled.button`
@@ -115,7 +117,7 @@ export const Button = styled.button`
   }
 `;
 export const HomeText = styled.div`
-  color: black;
+  color: #fff;
   align-items: center;
   align-content: center;
   float: right;
@@ -130,6 +132,6 @@ export const HomeContentP = styled.p`
   z-index: 99;
   font-family: "Indie Flower", cursive;
   @media screen and (max-width: 1054px) {
-   margin:auto;
+    margin: auto;
   }
 `;

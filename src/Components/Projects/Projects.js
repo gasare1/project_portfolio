@@ -18,15 +18,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './project.scss'
-import background from '../../Images/aboutback4.jpg'
+import background from '../../Images/projectpageback.jpeg'
 import { ProjHome } from "./Projele";
 import './project.css'
 function Projects() {
     AOS.init();
   return (
-      <div  id="projects" style={{
-       backgroundImage:`url(${background})`
-      }}>
+      <div  id="projects" style={{background:' #232526',background: '-webkit-linear-gradient(to right, #232526, #414345)',background: 'linear-gradient(to right, #232526, #414345)' }}>
     <ProjHome className='project'
       style={{
         

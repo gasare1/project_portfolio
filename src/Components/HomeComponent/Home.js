@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import video from "../../Images/mainback3.mp4";
+import video from "../../Images/homebg.jpeg";
 import { BsBootstrap } from "react-icons/bs";
 import {
   FaReact,
@@ -95,11 +95,11 @@ const Home = () => {
       <HomeContainer id="/">
       
         <HomeBg>
-          <Video autoPlay loop muted src={video} type="video/mp4" />
+          <Video style={{background:' #232526',background: '-webkit-linear-gradient(to left, #232526, #414345)',background: 'linear-gradient(to left, #232526, #414345)' }}></Video>
         </HomeBg>
         
         <HomeText>
-        <Weather id="weather" unit="F" lat={lat} lon={lng} appid="80f4d94a8038dc5274f4113b84de39cd" style={{display:'flex',zIndex:'99',color:'black',float:'left',backgroundColor:'gray'}}/>
+        <Weather id="weather" unit="F" lat={lat} lon={lng} appid="80f4d94a8038dc5274f4113b84de39cd" style={{display:'flex',zIndex:'99',color:'#fff',float:'left',backgroundColor:'gray'}}/>
           <HomeContentP
             data-aos="fade-left"
             data-aos-anchor="#example-anchor"
@@ -169,7 +169,7 @@ const Home = () => {
           >
             {" "}
             <a
-              style={{ textDecoration: "none", color: "black" }}
+              style={{ textDecoration: "none", color: "#fff" }}
               href="https://drive.google.com/uc?export=download&id=1cgy-2CWaaw7WQtPvTSbmBhvwTqW1mXxK"
               download
             >

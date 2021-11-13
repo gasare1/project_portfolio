@@ -171,7 +171,7 @@ const Navigbar = ({ login }) => {
     });
   };
   return (
-    <div style={{ zIndex: "" }}>
+    <div style={{ zIndex: "", caretColor: 'transparent' }}>
       
       <Navbar
         style={{
@@ -181,12 +181,12 @@ const Navigbar = ({ login }) => {
         }}
       >
         <Collapse isOpen={isOpen} navbar>
-          <NavbarBrand style={{ fontFamily: "Comfortaa, cursive",color:'black' }}>
+          <NavbarBrand style={{ fontFamily: "Comfortaa, cursive",color:'gray' }}>
             Glen Asare
           </NavbarBrand>
           <Mobilebtn>
             <CgMenuLeft
-              style={{ fontSize: "40px", color: "black" }}
+              style={{ fontSize: "40px", color: "gray" }}
               onClick={showMobileModal}
               ismobileMenu={ismobileMenu}
             />
@@ -195,17 +195,17 @@ const Navigbar = ({ login }) => {
             <NavItem>
               <NavLink to="/">
                 {" "}
-                <GiHouse style={{ color: "black", marginRight: "5px",cursor:'pointer' }} />{" "}
+                <GiHouse style={{ color: "gray", marginRight: "5px",cursor:'pointer' }} />{" "}
                 {name ? (
                   <Link
-                    style={{ color: "black", textDecoration: "none" }}
+                    style={{ color: "gray", textDecoration: "none" }}
                     to="/"
                   >
                     Home
                   </Link>
                 ) : (
                   <Links
-                    style={{ color: "black", textDecoration: "none" }}
+                    style={{ color: "gray", textDecoration: "none" }}
                     to="/"
                   >
                     Home
@@ -217,10 +217,10 @@ const Navigbar = ({ login }) => {
               <NavLink onClick={showContactModal} isContactOpen={isContactOpen}>
                 {" "}
                 <RiFindReplaceLine
-                  style={{ color: "black", marginRight: "5px" }}
+                  style={{ color: "gray", marginRight: "5px" }}
                 />
                 <Links
-                  style={{ color: "black", textDecoration: "none" }}
+                  style={{ color: "gray", textDecoration: "none" }}
                   to="projects"
                 >
                   Projects
@@ -232,11 +232,11 @@ const Navigbar = ({ login }) => {
                 {" "}
                 <Links style={{ textDecoration: "none" }} to="about">
                   <BsFillQuestionCircleFill
-                    style={{ color: "black", marginRight: "5px" }}
+                    style={{ color: "gray", marginRight: "5px" }}
                   />
 
                   <a
-                    style={{ textDecoration: "none", color: "black" }}
+                    style={{ textDecoration: "none", color: "gray" }}
                     target="_blank"
                   >
                     {" "}
@@ -249,12 +249,12 @@ const Navigbar = ({ login }) => {
             <NavItem id="navbarlink">
             <Navlinkout>
               <FaGithubAlt
-                style={{ color: "black", marginRight: "5px", fontSize: "20px" }}
+                style={{ color: "gray", marginRight: "5px", fontSize: "20px" }}
               />
               <a
                 style={{
                   textDecoration: "none",
-                  color: "black",
+                  color: "gray",
                   fontSize: "20px",
                 }}
                 href="https://github.com/gasare1"
@@ -265,12 +265,12 @@ const Navigbar = ({ login }) => {
               </a>
               </Navlinkout>
             </NavItem>
-            <NavItem id="navbarlink"style={{ color: "black", fontSize: "20px" }} >
+            <NavItem id="navbarlink"style={{ color: "gray", fontSize: "20px" }} >
               <AiFillLinkedin  />
               <a
                 style={{
                   textDecoration: "none",
-                  color: "black",
+                  color: "gray",
                   cursor: "pointer",
                   fontSize: "20px",
                 }}
@@ -287,9 +287,9 @@ const Navigbar = ({ login }) => {
                   <span> </span>
                 ) : (
                   <span>
-                    <BiLogInCircle style={{ color: "black" }} />
+                    <BiLogInCircle style={{ color: "gray" }} />
                     <a
-                      style={{ textDecoration: "none", color: "black" }}
+                      style={{ textDecoration: "none", color: "gray" }}
                       target="_blank"
                     >
                       {" "}
@@ -323,7 +323,7 @@ const Navigbar = ({ login }) => {
                       <span>
                         {" "}
                         <Link
-                          style={{ color: "black", textDecoration: "none" }}
+                          style={{ color: "gray", textDecoration: "none" }}
                           to="/profile"
                         >
                           Account
@@ -359,7 +359,7 @@ const Navigbar = ({ login }) => {
             <NavItem>
               <NavLink >
                 <a
-                  style={{ textDecoration: "none", color: "black" }}
+                  style={{ textDecoration: "none", color: "gray" }}
                   target="_blank"
                 >
                   {" "}
@@ -412,17 +412,17 @@ const Navigbar = ({ login }) => {
                   <NavItem>
                     <NavLink to="/" style={{ display: "flex" }}>
                       {" "}
-                      <GiHouse style={{ color: "black" }} />{" "}
+                      <GiHouse style={{ color: "gray" }} />{" "}
                       {name ? (
                         <Link
-                          style={{ color: "black", textDecoration: "none" }}
+                          style={{ color: "gray", textDecoration: "none" }}
                           to="/"
                         >
                           Home
                         </Link>
                       ) : (
                         <Links
-                          style={{ color: "black", textDecoration: "none" }}
+                          style={{ color: "gray", textDecoration: "none" }}
                           to="/"
                         >
                           Home
@@ -437,9 +437,9 @@ const Navigbar = ({ login }) => {
                       isContactOpen={isContactOpen}
                     >
                       {" "}
-                      <RiFindReplaceLine style={{ color: "black" }} />{" "}
+                      <RiFindReplaceLine style={{ color: "gray" }} />{" "}
                       <Links
-                        style={{ color: "black", textDecoration: "none" }}
+                        style={{ color: "gray", textDecoration: "none" }}
                         to="projects"
                       >
                         Projects
@@ -450,9 +450,9 @@ const Navigbar = ({ login }) => {
                     <NavLink style={{ display: "flex" }}>
                       {" "}
                       <Links style={{ textDecoration: "none" }} to="contact">
-                        <BsFillQuestionCircleFill style={{ color: "black" }} />
+                        <BsFillQuestionCircleFill style={{ color: "gray" }} />
                         <a
-                          style={{ textDecoration: "none", color: "black" }}
+                          style={{ textDecoration: "none", color: "gray" }}
                           target="_blank"
                         >
                           {" "}
@@ -463,11 +463,11 @@ const Navigbar = ({ login }) => {
                   </NavItem>
                   <NavItem>
                     <NavLink style={{ display: "flex" }}>
-                      <GiReceiveMoney style={{ color: "black" }} />
+                      <GiReceiveMoney style={{ color: "gray" }} />
                       <a
                         style={{
                           textDecoration: "none",
-                          color: "black",
+                          color: "gray",
                           cursor: "pointer",
                         }}
                         target="_blank"
@@ -480,11 +480,11 @@ const Navigbar = ({ login }) => {
                   </NavItem>
                   <NavItem>
                     <NavLink style={{ display: "flex" }}>
-                      <AiFillLinkedin style={{ color: "black" }} />
+                      <AiFillLinkedin style={{ color: "gray" }} />
                       <a
                         style={{
                           textDecoration: "none",
-                          color: "black",
+                          color: "gray",
                           cursor: "pointer",
                         }}
                         target="_blank"
@@ -514,7 +514,7 @@ const Navigbar = ({ login }) => {
                               {" "}
                               <Link
                                 style={{
-                                  color: "black",
+                                  color: "gray",
                                   textDecoration: "none",
                                 }}
                                 to="/profile"
@@ -524,7 +524,7 @@ const Navigbar = ({ login }) => {
                             </span>
                           ) : (
                             <span
-                              style={{ color: "black", textDecoration: "none" }}
+                              style={{ color: "gray", textDecoration: "none" }}
                               onClick={showModal}
                               isLoginOpen={isloginopen}
                             >
@@ -579,11 +579,11 @@ const Navigbar = ({ login }) => {
                   <NavItem style={{ display: "flex" }}>
                     <NavLink >
                       <a
-                        style={{ textDecoration: "none", color: "black" }}
+                        style={{ textDecoration: "none", color: "gray" }}
                         target="_blank"
                       >
                         {" "}
-                        Hi <span style={{ color: "black" }}>{name} !</span>
+                        Hi <span style={{ color: "gray" }}>{name} !</span>
                       </a>
                     </NavLink>
                   </NavItem>
