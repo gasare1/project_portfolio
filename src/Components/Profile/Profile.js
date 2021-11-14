@@ -145,7 +145,7 @@ const Profile = () => {
           <HomeP style={{ color: `${onbackground ? "white" : "black"}` }}>
             Welcome to your profile page.
           </HomeP>
-          <span style={{ color: "black" }}>
+          <span style={{ color: `${onbackground ? "white" : "black"}` }}>
             <ProgressBar
               animated
               now={now}

@@ -37,6 +37,7 @@ import "aos/dist/aos.css";
 import "./home.css";
 import file from "./Profile.pdf";
 import Weather from 'simple-react-weather'
+import { SiPostman,SiJira,SiJava,SiAsana,SiGnubash } from "react-icons/si";
 import GeoLocation from './GeoLocation'
 const Home = () => {
   AOS.init();
@@ -149,6 +150,51 @@ const Home = () => {
             data-aos-duration="1500"
           >
             GitHub <FaGithubAlt />
+          </HomeContentP>
+          <HomeContentP
+            data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="600"
+            data-aos-duration="1500"
+          >
+            Bash <SiGnubash />
+            
+          </HomeContentP>
+          <HomeContentP
+            data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="600"
+            data-aos-duration="1500"
+          >
+            Postman <SiPostman />
+            
+          </HomeContentP>
+          <HomeContentP
+            data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="600"
+            data-aos-duration="1500"
+          >
+            Java <SiJava />
+            
+          </HomeContentP>
+          <HomeContentP
+            data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="600"
+            data-aos-duration="1500"
+          >
+            Asana <SiAsana />
+            
+          </HomeContentP>
+          <HomeContentP
+            data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="600"
+            data-aos-duration="1500"
+          >
+            Jira <SiJira />
+            
           </HomeContentP>
         </HomeText>
         <HomeContent id="homecontent">
