@@ -33,15 +33,13 @@ function App() {
         <Route path="/" component={About} exact>
           <About />
         </Route>{" "}
-        <Route path="/" component={Footers} exact>
-          <Footers />
-        </Route>
         {localStorage.getItem("firstname") ? (
           <Route path="/profile" component={() => <Profile />} exact />
         ) : (
           <Route path="/profile" component={() => <Unauthorizedpage  />} exact />
         )}
       </Router>
+      <Footers />
     </div>
   );
 }
