@@ -7,7 +7,7 @@ import image from '../../Images/profileimage.jpeg'
 function About() {
     AOS.init();
   return (
-    <div id="about" style={{background:' #000000',background: '-webkit-linear-gradient(to right, #000000, #434343);',background: 'linear-gradient(to right, #000000, #434343)' }}>
+    <div id="about" style={{background:' #000000',background: '-webkit-linear-gradient(to right, #000000, #434343);',background: 'linear-gradient(to right, #000000, #434343)',caretColor:'transparent' }}>
         <div id="text">
       <h1 data-aos="zoom-in"> Who is Glen?</h1>
       <div style={{borderRadius:'100%'}}  className="imageclass"><img style={{borderRadius:'100%',height:'200px'}} src={image}/></div>

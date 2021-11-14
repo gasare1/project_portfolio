@@ -19,7 +19,7 @@ import { useEffect } from "react";
 import Unauthorizedpage from "./Components/Store/Unauthorized";
 function App() {
   return (
-    <div className="d-flex flex-column h-100">
+    <div className="d-flex flex-column h-100" style={{caretColor:'transparent'}}>
       <Router>
         <ScrollToTop />
         <Navigbar />

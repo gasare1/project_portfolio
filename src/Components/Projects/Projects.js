@@ -24,7 +24,7 @@ import './project.css'
 function Projects() {
     AOS.init();
   return (
-      <div  id="projects" style={{background:' #232526',background: '-webkit-linear-gradient(to right, #232526, #414345)',background: 'linear-gradient(to right, #232526, #414345)' }}>
+      <div  id="projects" style={{background:' #232526',background: '-webkit-linear-gradient(to right, #232526, #414345)',background: 'linear-gradient(to right, #232526, #414345)',caretColor:'transparent' }}>
     <ProjHome className='project'
       style={{
         
