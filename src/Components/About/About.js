@@ -13,8 +13,7 @@ function About() {
       <div style={{borderRadius:'100%'}}  className="imageclass"><img style={{borderRadius:'100%',height:'200px'}} src={image}/></div>
       <p data-aos="fade-up"
      data-aos-duration="3000">
-        I'm a bootcamp Graduate of Nucamp. I currently work for Electic AI as a
-        System Administrator
+        I was a Junior Software Engineer for Cloud Computing Technologies
       </p>
       <p data-aos="fade-up"
      data-aos-duration="3000">I discovered Coding during my Freshman year of Highschool</p>
@@ -39,8 +38,8 @@ function About() {
       </p>
       <p data-aos="fade-up"
      data-aos-duration="3000" >
-        I worked hard to learn as much as I could. So far I have knowledge in
-        Python, Java, React framework and PostgresSQL
+        I worked hard to learn as much as I could. So far I have experience with
+        Python, Java, React framework, PostgresSQL, Docker, etc.
       </p>
       <p data-aos="fade-up"
      data-aos-duration="3000">
@@ -55,7 +54,7 @@ function About() {
       <p data-aos="fade-up"
      data-aos-duration="3000">
         I'm always learning and have dedicated myself to learn as much
-        as I can. My goal for the next year is to become a Software Engineer.
+        as I can. My goal is to become one of the best Software Engineers.
       </p>
       </div>
     </div>
