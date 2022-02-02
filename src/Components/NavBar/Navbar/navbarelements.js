@@ -40,7 +40,7 @@ export const NavLink = styled(Links)`
     color: white;
   }
 
-  @media screen and (max-width: 1054px) {
+  @media screen and (max-width: 1400px) {
     display: none;
   }
 `;
@@ -147,7 +147,7 @@ export const Container = styled.div``;
 export const BurgerMenu = styled.div``;
 export const Mobilebtn = styled.div`
   display: none;
-  @media screen and (max-width: 1054px) {
+  @media screen and (max-width: 1400px) {
     display: flex;
     justify-content: space-between;
     float: right;

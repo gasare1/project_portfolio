@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card, Button } from "react-bootstrap";
+
+import { Card, Button, Container } from "react-bootstrap";
 import image from "../../Images/callmrmoe.PNG";
 import image2 from "../../Images/blissrec.PNG";
 import image3 from "../../Images/IBM.PNG";
@@ -37,6 +38,9 @@ function Projects() {
         data-aos="fade-up"
         data-aos-duration="3000"
       >
+        <Container>
+        <Row xs={1} md={2}>
+        <Col  md={4}>
         <Card
           style={{ width: "18rem", margin: "50px" }}
           className="shadow-lg p-3 mb-5 bg-white rounded"
@@ -56,6 +60,8 @@ function Projects() {
             </Button>
           </Card.Body>
         </Card>
+        </Col>
+        <Col md={4}>
         <Card
           style={{ width: "18rem", margin: "50px" }}
           className="shadow-lg p-3 mb-5 bg-white rounded"
@@ -75,6 +81,9 @@ function Projects() {
             </Button>
           </Card.Body>
         </Card>
+        </Col>
+        
+        <Col md={1}>
         <Card
           style={{ width: "18rem", margin: "50px" }}
           className="shadow-lg p-3 mb-5 bg-white rounded"
@@ -94,6 +103,9 @@ function Projects() {
             </Button>
           </Card.Body>
         </Card>
+        </Col>
+        <Row xs={1} md={2}>
+        <Col>
         <Card
           style={{ width: "18rem", margin: "50px" }}
           className="shadow-lg p-3 mb-5 bg-white rounded"
@@ -112,12 +124,17 @@ function Projects() {
             </Button>
           </Card.Body>
         </Card>
+        </Col>
+        <Col>
+        </Col>
+        </Row>
+        <Col md={4}>
         <Card
           style={{ width: "18rem", margin: "50px" }}
           className="shadow-lg p-3 mb-5 bg-white rounded"
           className="card2"
         >
-          <Card.Img variant="top" src={image3} />
+          <Card.Img variant="top" src={image5} />
           <Card.Body>
             <Card.Title style={{ fontWeight: "bolder" }}>
               Madrigal CarWash
@@ -130,6 +147,9 @@ function Projects() {
             </Button>
           </Card.Body>
         </Card>
+        </Col>
+        </Row>
+        </Container>
       </ProjHome>
     </div>
   );
