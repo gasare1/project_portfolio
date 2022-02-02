@@ -5,6 +5,7 @@ import image from "../../Images/callmrmoe.PNG";
 import image2 from "../../Images/blissrec.PNG";
 import image3 from "../../Images/IBM.PNG";
 import image4 from "../../Images/adminPicture.PNG";
+import image5 from "../../Images/madrigal.PNG";
 import {
   Form,
   Modal,
@@ -107,6 +108,24 @@ function Projects() {
               This is a Church Website it was built using Reactjs
             </Card.Text>
             <Button variant="primary" href="https://ibmchurch.com/#/">
+              Access Page
+            </Button>
+          </Card.Body>
+        </Card>
+        <Card
+          style={{ width: "18rem", margin: "50px" }}
+          className="shadow-lg p-3 mb-5 bg-white rounded"
+          className="card2"
+        >
+          <Card.Img variant="top" src={image3} />
+          <Card.Body>
+            <Card.Title style={{ fontWeight: "bolder" }}>
+              Madrigal CarWash
+            </Card.Title>
+            <Card.Text>
+              This is a carwash website I am building for a client that is not completed yet. Utililzed React Bootstrap and Styled-components
+            </Card.Text>
+            <Button variant="primary" href="https://madrigalcarwash.com/">
               Access Page
             </Button>
           </Card.Body>
