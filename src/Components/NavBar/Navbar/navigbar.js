@@ -275,7 +275,7 @@ const Navigbar = ({ login }) => {
                   fontSize: "20px",
                 }}
                 href="https://www.linkedin.com/in/glen-asare-6b1bb61a2/"
-                target="blank"
+                
               >
                 {" "}
                 LinkedIn
@@ -451,18 +451,17 @@ const Navigbar = ({ login }) => {
                       {" "}
                       <Links style={{ textDecoration: "none" }} to="contact">
                         <BsFillQuestionCircleFill style={{ color: "gray" }} />
-                        <a
-                          style={{ textDecoration: "none", color: "gray" }}
-                          target="_blank"
+                        <Links
+                          style={{ color: "gray", textDecoration: "none" }}
+                          to="about"
                         >
-                          {" "}
-                          About{" "}
-                        </a>
+                          About
+                        </Links>
                       </Links>
                     </NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink style={{ display: "flex" }}>
+                   
                       <GiReceiveMoney style={{ color: "gray" }} />
                       <a
                         style={{
@@ -470,16 +469,16 @@ const Navigbar = ({ login }) => {
                           color: "gray",
                           cursor: "pointer",
                         }}
-                        target="_blank"
+                        
                         href="https://github.com/gasare1/Call_Mr.Moe"
                       >
                         {" "}
                         GitHub
                       </a>
-                    </NavLink>
+                 
                   </NavItem>
                   <NavItem>
-                    <NavLink style={{ display: "flex" }}>
+                   
                       <AiFillLinkedin style={{ color: "gray" }} />
                       <a
                         style={{
@@ -488,12 +487,13 @@ const Navigbar = ({ login }) => {
                           cursor: "pointer",
                         }}
                         target="_blank"
+                        rel="noreferrer"
                         href="https://github.com/gasare1/Call_Mr.Moe"
                       >
                         {" "}
                         LinkedIn
                       </a>
-                    </NavLink>
+                    
                   </NavItem>
                   <NavItem>
                     <NavLink style={{ display: "flex" }}>
