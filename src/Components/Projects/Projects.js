@@ -7,15 +7,7 @@ import image2 from "../../Images/blissrec.PNG";
 import image3 from "../../Images/IBM.PNG";
 import image4 from "../../Images/adminPicture.PNG";
 import image5 from "../../Images/madrigal.PNG";
-import {
-  Form,
-  Modal,
-  Row,
-  Col,
-  Dropdown,
-  DropdownButton,
-  NavDropdown,
-} from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -26,9 +18,9 @@ import "./project.css";
 function Projects() {
   AOS.init();
   return (
-    <div id="projects"  data-aos="fade-up"
-    data-aos-duration="3000">
-      <Container style={{marginTop:'20px'}}>
+    <div id="projects" data-aos="fade-up" data-aos-duration="3000">
+    <h1 style={{color:'white',zIndex:'1',justifyContent:'center',alignItems:'center',display:'flex',marginTop:'50px',fontFamily:'monospace'}}>My Projects</h1>
+      <Container style={{ marginTop: "20px" }}>
         <Row>
           <Col xs={12} md={4}>
             <Card className="shadow-lg p-3 mb-5 bg-white rounded" id="card2">
@@ -87,55 +79,46 @@ function Projects() {
             </Card>
           </Col>
         </Row>
-        <Row >
-        <Col xs={12} md={4}>
-        <Card
-         
-          className="shadow-lg p-3 mb-5 bg-white rounded"
-          id="card2"
-        >
-          <Card.Img variant="top" src={image3} />
-          <Card.Body>
-            <Card.Title style={{ fontWeight: "bolder" }}>
-              International Baptist Ministries
-            </Card.Title>
-            <Card.Text>
-              This is a Church Website it was built using Reactjs
-            </Card.Text>
-            <Button variant="primary" href="https://ibmchurch.com/#/">
-              Access Page
-            </Button>
-          </Card.Body>
-        </Card>
-        </Col>
-        <Col>
-        </Col>
-        
-        <Col xs={12} md={4} >
-        <Card
-          
-          className="shadow-lg p-3 mb-5 bg-white rounded"
-          id="card2"
-        >
-          <Card.Img variant="top" src={image5} />
-          <Card.Body>
-            <Card.Title style={{ fontWeight: "bolder" }}>
-              Madrigal CarWash
-            </Card.Title>
-            <Card.Text>
-              This is a carwash website I am building for a client that is not completed yet. Utililzed React Bootstrap and Styled-components
-            </Card.Text>
-            <Button variant="primary" href="https://madrigalcarwash.com/">
-              Access Page
-            </Button>
-          </Card.Body>
-        </Card>
-        </Col>
-        <Col>
-        
-        </Col>
+        <Row>
+          <Col xs={12} md={4}>
+            <Card className="shadow-lg p-3 mb-5 bg-white rounded" id="card2">
+              <Card.Img variant="top" src={image3} />
+              <Card.Body>
+                <Card.Title style={{ fontWeight: "bolder" }}>
+                  International Baptist Ministries
+                </Card.Title>
+                <Card.Text>
+                  This is a Church Website it was built using Reactjs
+                </Card.Text>
+                <Button variant="primary" href="https://ibmchurch.com/#/">
+                  Access Page
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col></Col>
+
+          <Col xs={12} md={4}>
+            <Card className="shadow-lg p-3 mb-5 bg-white rounded" id="card2">
+              <Card.Img variant="top" src={image5} />
+              <Card.Body>
+                <Card.Title style={{ fontWeight: "bolder" }}>
+                  Madrigal CarWash
+                </Card.Title>
+                <Card.Text>
+                  This is a carwash website I am building for a client that is
+                  not completed yet. Utililzed React Bootstrap and
+                  Styled-components
+                </Card.Text>
+                <Button variant="primary" href="https://madrigalcarwash.com/">
+                  Access Page
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col></Col>
         </Row>
-        </Container>
+      </Container>
     </div>
   );
 }
