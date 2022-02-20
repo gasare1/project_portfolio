@@ -217,7 +217,7 @@ const Home = () => {
             {" "}
             <a
               style={{ textDecoration: "none", color: "#fff" }}
-              href="https://drive.google.com/uc?export=download&id=1cthk3IUjbcO0OeliCpQ92nM0deFKgMHT"
+              href="https://drive.google.com/uc?export=download&id=1V01ZHmRVjNdnfZ72koT5OoU94X-U_GHV"
               download
             >
               <strong>Download my Resume!</strong>
