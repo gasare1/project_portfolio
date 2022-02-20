@@ -18,7 +18,7 @@ import "./project.css";
 function Projects() {
   AOS.init();
   return (
-    <div id="projects" data-aos="fade-up" data-aos-duration="3000">
+    <div id="projects" >
     <h1 style={{color:'white',zIndex:'1',justifyContent:'center',alignItems:'center',display:'flex',marginTop:'50px',fontFamily:'monospace'}}>My Projects</h1>
       <Container style={{ marginTop: "20px" }}>
         <Row>
