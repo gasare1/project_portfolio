@@ -199,7 +199,8 @@ const Home = () => {
         </HomeText>
         <HomeContent id="homecontent">
           <HomeH1>Hello World </HomeH1>
-          <HomeP id="homep" >Welcome to my web-development portfolio.</HomeP>
+          <HomeP id="homep" >Welcome to my web-development portfolio </HomeP>
+          <HomeP id="homep" >Login username is test, password test also can log in with your google account.</HomeP>
           <Button
             variant="outlined"
             color="primary"
