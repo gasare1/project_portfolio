@@ -488,7 +488,7 @@ const Navigbar = ({ login }) => {
                         }}
                         target="_blank"
                         rel="noreferrer"
-                        href="https://github.com/gasare1/Call_Mr.Moe"
+                        href="https://www.linkedin.com/in/glen-asare-6b1bb61a2/"
                       >
                         {" "}
                         LinkedIn
