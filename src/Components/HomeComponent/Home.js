@@ -30,7 +30,7 @@ import {
   HomeText,
   HomeContentP,
 } from "./HomeStyle";
-import { animateScroll as scroll } from "react-scroll";
+import backgroundImage from '../../Images/cool-background.png'
 import { Button } from "@material-ui/core";
 import { SiPostgresql } from "react-icons/si";
 import "aos/dist/aos.css";
@@ -38,7 +38,7 @@ import "./home.css";
 import file from "./Profile.pdf";
 import Weather from 'simple-react-weather'
 import { SiPostman,SiJira,SiJava,SiAsana,SiGnubash } from "react-icons/si";
-import GeoLocation from './GeoLocation'
+
 const Home = () => {
   AOS.init();
 
@@ -96,7 +96,7 @@ const Home = () => {
       <HomeContainer id="/">
       
         <HomeBg>
-          <Video style={{background:' #232526',background: '-webkit-linear-gradient(to left, #232526, #414345)',background: 'linear-gradient(to left, #232526, #414345)' }}></Video>
+          <img src={backgroundImage} style={{width:'100vw',height:'100vh'}}/>
         </HomeBg>
         
         <HomeText>
