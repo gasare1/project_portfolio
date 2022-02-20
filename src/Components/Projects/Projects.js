@@ -5,7 +5,7 @@ import { Card, Button, Container } from "react-bootstrap";
 import image from "../../Images/callmrmoe.PNG";
 import image2 from "../../Images/blissrec.PNG";
 import image3 from "../../Images/IBM.PNG";
-import image4 from "../../Images/adminPicture.PNG";
+import image4 from "../../Images/DashboardNew.png";
 import image5 from "../../Images/madrigal.PNG";
 import { Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
