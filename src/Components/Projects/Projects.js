@@ -44,16 +44,15 @@ function Projects() {
               <Card.Img variant="top" src={image4} />
               <Card.Body>
                 <Card.Title style={{ fontWeight: "bolder" }}>
-                  Admin Console
+                  Smart Home Dashboard
                 </Card.Title>
                 <Card.Text>
-                  This is a Admin that was build with ReactJs Framework and
-                  Random User API.. *NOT Mobile Responsive yet work is still in
+                  This is a Dashboard that was build with ReactJs Framework. *NOT Mobile Responsive yet work is still in
                   progress
                 </Card.Text>
                 <Button
                   variant="primary"
-                  href="https://adminconsole.netlify.app"
+                  href="https://smarthomep.netlify.app/"
                 >
                   Access Page
                 </Button>
